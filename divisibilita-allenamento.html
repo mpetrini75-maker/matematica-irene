@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#FAF6EE">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Matematica di Irene">
+<script src="alert.js"></script>
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<title>Divisibilità, primi, MCD e mcm — Allenamento</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAF6EE; --card:#FFFFFF; --ink:#2F2A24;
+    --accent:#6E5BA6; --accent-soft:#ECE4F5;
+    --green:#3E8E5A; --green-soft:#E2F0E6;
+    --red:#C2492F; --red-soft:#F6E1DB;
+    --blue:#3B6EA5; --blue-soft:#E2ECF5;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; font-family:"Lexend","Trebuchet MS",Verdana,sans-serif;
+    background:var(--bg); color:var(--ink); line-height:1.7; letter-spacing:0.3px; padding:24px 14px 60px;}
+  .wrap{max-width:620px;margin:0 auto;}
+  h1{color:var(--accent);font-size:1.6rem;text-align:center;margin:0 0 6px;}
+  .sub{text-align:center;color:#8a7f70;margin:0 0 26px;font-size:1rem;}
+  .card{background:var(--card);border-radius:18px;padding:22px 20px;margin-bottom:22px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.06);border:1px solid #efe7da;}
+  .card h2{margin:0 0 10px;font-size:1.25rem;color:var(--accent);display:flex;align-items:center;gap:8px;}
+  .card .lead{color:#8a7f70;margin:0 0 12px;font-size:0.97rem;}
+  .levelbar{margin:0 0 12px;}
+  .lvrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:0.98rem;color:var(--accent);}
+  .lvdots{display:inline-flex;gap:6px;}
+  .lvdot{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    background:var(--bg);border:2px solid var(--accent-soft);color:#b9ad9c;font-size:0.85rem;font-weight:bold;}
+  .lvdot.on{background:var(--accent-soft);border-color:var(--accent);color:var(--accent);}
+  .ex{margin:14px 0;}
+  .qnum{font-weight:bold;color:var(--accent);}
+  .qtext{font-size:1.12rem;margin:6px 0 8px;}
+  .options{display:flex;flex-direction:column;gap:10px;}
+  .opt{background:var(--bg);border:2px solid var(--accent-soft);
+    border-radius:12px;padding:13px 14px;font-size:1.08rem;cursor:pointer;
+    text-align:left;font-family:inherit;color:var(--ink);transition:all .15s;}
+  .opt:hover{border-color:var(--accent);}
+  .opt.correct{background:var(--green-soft);border-color:var(--green);color:var(--green);font-weight:bold;}
+  .opt.wrong{background:var(--red-soft);border-color:var(--red);color:var(--red);}
+  .feedback{margin-top:10px;font-size:1.02rem;font-weight:bold;min-height:24px;}
+  .feedback.ok{color:var(--green);}
+  .feedback.no{color:var(--red);}
+  .progress{text-align:center;font-size:1.05rem;margin:12px 0 0;color:#8a7f70;}
+  .star{font-size:1.4rem;}
+  .calc-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:4px;}
+  .write-input{flex:1;min-width:120px;font-family:"Lexend",sans-serif;font-size:1.2rem;
+    padding:12px 14px;border:2px solid var(--accent-soft);border-radius:12px;
+    background:var(--bg);color:var(--ink);}
+  .write-input:focus{outline:none;border-color:var(--accent);}
+  .unit{font-size:1.1rem;color:#8a7f70;font-weight:bold;}
+  .checkbtn{margin-top:10px;background:var(--accent);color:#fff;border:none;
+    border-radius:12px;padding:10px 20px;font-size:1rem;cursor:pointer;font-family:inherit;}
+  .write-input.okbox{border-color:var(--green);background:var(--green-soft);}
+  .write-input.nobox{border-color:var(--red);}
+  .match-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px;}
+  .match-col{display:flex;flex-direction:column;gap:10px;}
+  .match-btn{background:var(--bg);border:2px solid var(--accent-soft);border-radius:12px;
+    padding:12px;font-size:1.02rem;cursor:pointer;font-family:inherit;color:var(--ink);
+    display:flex;align-items:center;justify-content:center;text-align:center;gap:6px;transition:all .15s;}
+  .match-btn:hover{border-color:var(--accent);}
+  .match-btn.sel{border-color:var(--blue);background:var(--blue-soft);color:var(--blue);font-weight:bold;}
+  .match-btn.done{background:var(--green-soft);border-color:var(--green);color:var(--green);
+    font-weight:bold;cursor:default;opacity:0.85;}
+  .match-btn.flash{border-color:var(--red);background:var(--red-soft);}
+  .restart{display:inline-block;margin:12px auto 0;background:var(--accent);color:#fff;border:none;
+    border-radius:12px;padding:11px 22px;font-size:1rem;cursor:pointer;font-family:inherit;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a href="index.html" style="display:inline-block;background:#ECE4F5;color:#6E5BA6;text-decoration:none;border-radius:12px;padding:8px 16px;font-size:0.98rem;font-weight:bold;margin-bottom:14px;">&larr; Indice</a>
+  <h1>🏋️ Divisibilità, primi, MCD e mcm — Allenamento</h1>
+  <p class="sub">Mattoncino 2 · 3 sezioni · 4 livelli ciascuna 🔍</p>
+
+  <div class="card">
+    <h2>🧮 1. Calcoli</h2>
+    <p class="lead">Scrivi solo il numero e tocca "Controlla". Se sbagli, ti spiego come si fa!</p>
+    <div class="levelbar" id="calc-level"></div>
+    <div id="calc-list"></div>
+    <div class="progress" id="calc-prog"></div>
+  </div>
+
+  <div class="card">
+    <h2>🧠 2. Concetti</h2>
+    <p class="lead">Scegli la risposta giusta. Puoi riprovare finché non la trovi!</p>
+    <div class="levelbar" id="quiz-level"></div>
+    <div id="quiz-box"></div>
+    <div class="progress" id="quiz-prog"></div>
+  </div>
+
+  <div class="card">
+    <h2>🔗 3. Abbina</h2>
+    <p class="lead">Tocca una casella a sinistra, poi la sua coppia a destra. Collega tutte le coppie!</p>
+    <div class="levelbar" id="match-level"></div>
+    <div class="match-grid" id="match-grid"></div>
+    <div class="progress" id="match-prog"></div>
+  </div>
+</div>
+
+<script>
+  function stars(correct,total){
+    const pct=correct/total;
+    const n=pct===1?5:pct>=0.75?4:pct>=0.5?3:pct>=0.25?2:1;
+    return "⭐".repeat(n);
+  }
+  const LV=["Base","Intermedio","Avanzato","Sfida"];
+  function levelBar(level){
+    let dots="";
+    for(let i=0;i<4;i++) dots+=`<span class="lvdot ${i<=level?'on':''}">${i+1}</span>`;
+    return `<div class="lvrow"><b>Livello ${level+1} di 4 · ${LV[level]} 🔓</b><span class="lvdots">${dots}</span></div>`;
+  }
+  function levelResult(progEl, score, total, level, threshold, setFnName){
+    const passed = score>=threshold;
+    let html=`<div class="star">${stars(score,total)}</div>${score}/${total} giuste<br>`;
+    if(passed && level<3){
+      html+=`<b>Bravissima! Livello ${level+2} sbloccato 🔓</b><br>`;
+      html+=`<button class="restart" onclick="${setFnName}(${level+1})">➡️ Vai al Livello ${level+2}</button>`;
+    } else if(passed && level===3){
+      if(window.segnaSezioneAllenamento) segnaSezioneAllenamento(setFnName);
+      html+=`<b>🏆 Hai completato tutti i livelli!</b><br>`;
+      html+=`<button class="restart" onclick="${setFnName}(0)">🔄 Rigioca dal Livello 1</button>`;
+    } else {
+      html+=`<b>Ci sei quasi! Riprova questo livello, ce la fai 🌱</b><br>`;
+      html+=`<button class="restart" onclick="${setFnName}(${level})">🔄 Rifai il Livello ${level+1}</button>`;
+    }
+    progEl.innerHTML=html;
+  }
+  function shuffle(a){ a=a.slice(); for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+
+  /* ============ SEZIONE 1 — CALCOLI ============ */
+  const calcLevels = [
+    [ // L1 — divisori, multipli, criteri
+      {q:"Somma delle cifre di 51 = ?", a:6, unit:"", sol:"5+1 = 6."},
+      {q:"Il resto di 12 : 3 = ?", a:0, unit:"", sol:"12 : 3 = 4 col resto 0 (divisione esatta)."},
+      {q:"Il più piccolo numero primo = ?", a:2, unit:"", sol:"È il 2."},
+      {q:"Quanti divisori ha 7? (1 e 7)", a:2, unit:"", sol:"Solo 1 e 7: per questo è primo."},
+      {q:"Il 5° multiplo di 3 (3 × 5) = ?", a:15, unit:"", sol:"3 × 5 = 15."},
+      {q:"Somma delle cifre di 123 = ?", a:6, unit:"", sol:"1+2+3 = 6."},
+    ],
+    [ // L2 — scomposizione / ricomposizione
+      {q:"2 × 3 × 5 = ?", a:30, unit:"", sol:"30 (scomposizione di 30)."},
+      {q:"2² × 5 = ?", a:20, unit:"", sol:"4 × 5 = 20."},
+      {q:"2³ = ?", a:8, unit:"", sol:"2×2×2 = 8."},
+      {q:"3² × 2 = ?", a:18, unit:"", sol:"9 × 2 = 18."},
+      {q:"2² × 3² = ?", a:36, unit:"", sol:"4 × 9 = 36."},
+      {q:"5 × 7 = ?", a:35, unit:"", sol:"35 (prodotto di due primi)."},
+    ],
+    [ // L3 — MCD
+      {q:"MCD(12, 18) = ?", a:6, unit:"", sol:"12=2²×3, 18=2×3² → 2×3 = 6."},
+      {q:"MCD(8, 20) = ?", a:4, unit:"", sol:"8=2³, 20=2²×5 → 2² = 4."},
+      {q:"MCD(9, 15) = ?", a:3, unit:"", sol:"9=3², 15=3×5 → 3."},
+      {q:"MCD(24, 36) = ?", a:12, unit:"", sol:"24=2³×3, 36=2²×3² → 2²×3 = 12."},
+      {q:"MCD(7, 13) = ?", a:1, unit:"", sol:"Sono primi tra loro → MCD 1."},
+      {q:"MCD(10, 25) = ?", a:5, unit:"", sol:"10=2×5, 25=5² → 5."},
+    ],
+    [ // L4 — mcm
+      {q:"mcm(4, 6) = ?", a:12, unit:"", sol:"4=2², 6=2×3 → 2²×3 = 12."},
+      {q:"mcm(6, 9) = ?", a:18, unit:"", sol:"6=2×3, 9=3² → 2×3² = 18."},
+      {q:"mcm(8, 12) = ?", a:24, unit:"", sol:"8=2³, 12=2²×3 → 2³×3 = 24."},
+      {q:"mcm(5, 7) = ?", a:35, unit:"", sol:"Primi tra loro → 5×7 = 35."},
+      {q:"mcm(10, 15) = ?", a:30, unit:"", sol:"10=2×5, 15=3×5 → 2×3×5 = 30."},
+      {q:"mcm(12, 18) = ?", a:36, unit:"", sol:"2²×3² = 36."},
+    ],
+  ];
+  let cLevel=0, calcDone=[];
+  function parseNum(s){ return parseFloat(String(s).trim().replace("−","-").replace(",", ".").replace(/\s+/g,"")); }
+  function setCalcLevel(lvl){
+    cLevel=lvl;
+    const data=calcLevels[lvl];
+    calcDone=new Array(data.length).fill(false);
+    document.getElementById("calc-level").innerHTML=levelBar(lvl);
+    document.getElementById("calc-prog").textContent=`Completati 0 di ${data.length}`;
+    const list=document.getElementById("calc-list");
+    list.innerHTML=data.map((it,i)=>`
+      <div class="ex">
+        <div class="qnum">Calcolo ${i+1}</div>
+        <div class="qtext">${it.q}</div>
+        <div class="calc-row">
+          <input class="write-input" id="ci${i}" type="text" inputmode="text" autocomplete="off" placeholder="numero…">
+          <span class="unit">${it.unit}</span>
+        </div>
+        <button class="checkbtn" onclick="checkCalc(${i})">Controlla</button>
+        <div class="feedback" id="cfb${i}"></div>
+      </div>`).join("");
+  }
+  function checkCalc(i){
+    const it=calcLevels[cLevel][i];
+    const inp=document.getElementById("ci"+i);
+    const fb=document.getElementById("cfb"+i);
+    const val=parseNum(inp.value);
+    const ok = !isNaN(val) && Math.abs(val - it.a) < 0.01;
+    if(ok){
+      inp.classList.add("okbox"); inp.classList.remove("nobox");
+      fb.innerHTML="✅ Perfetto! "+it.sol; fb.className="feedback ok";
+    } else {
+      inp.classList.add("nobox");
+      fb.innerHTML=`💜 Quasi! ${it.sol}<br>La risposta è: <b>${String(it.a).replace("-","−").replace(".",",")}</b>`;
+      fb.className="feedback no";
+    }
+    if(!calcDone[i]){ calcDone[i]=true; updateCalc(); }
+  }
+  function updateCalc(){
+    const data=calcLevels[cLevel];
+    const pr=document.getElementById("calc-prog");
+    const done=calcDone.filter(Boolean).length;
+    if(done<data.length){ pr.textContent=`Completati ${done} di ${data.length}`; return; }
+    let correct=0;
+    data.forEach((it,i)=>{ if(document.getElementById("ci"+i).classList.contains("okbox")) correct++; });
+    levelResult(pr, correct, data.length, cLevel, 4, "setCalcLevel");
+  }
+
+  /* ============ SEZIONE 2 — CONCETTI ============ */
+  const quizLevels = [
+    [ // L1
+      {q:"Un numero primo ha…", opts:["esattamente due divisori","tantissimi divisori","nessun divisore"], correct:0},
+      {q:"Il numero 1 è…", opts:["primo","composto","né primo né composto"], correct:2},
+      {q:"Un numero è divisibile per 2 se…", opts:["finisce con cifra pari","è dispari","finisce per 5"], correct:0},
+      {q:"Qual è un numero primo?", opts:["9","11","15"], correct:1},
+      {q:"I multipli di un numero sono…", opts:["infiniti","solo due","finiti"], correct:0},
+      {q:"12 è divisibile per 3? (1+2=3)", opts:["sì","no","solo per 2"], correct:0},
+    ],
+    [ // L2
+      {q:"Un numero è divisibile per 3 se…", opts:["la somma delle cifre è divisibile per 3","finisce per 3","è dispari"], correct:0},
+      {q:"Scomporre in fattori primi significa…", opts:["scriverlo come prodotto di numeri primi","sommare le cifre","trovare i multipli"], correct:0},
+      {q:"Quale NON è un numero primo?", opts:["2","21","17"], correct:1},
+      {q:"L'unico numero primo pari è…", opts:["2","4","nessuno"], correct:0},
+      {q:"Un numero divisibile per 10 finisce per…", opts:["0","5","1"], correct:0},
+      {q:"60 scomposto in fattori primi è…", opts:["2²×3×5","2×3×5","2³×5"], correct:0},
+    ],
+    [ // L3
+      {q:"Il MCD si trova prendendo i fattori…", opts:["comuni, con esponente più piccolo","tutti, con esponente più grande","a caso"], correct:0},
+      {q:"Due numeri 'primi tra loro' hanno MCD…", opts:["1","0","il più grande"], correct:0},
+      {q:"Il mcm si trova prendendo i fattori…", opts:["tutti, con esponente più grande","solo comuni","con esponente più piccolo"], correct:0},
+      {q:"Il MCD serve soprattutto a…", opts:["semplificare le frazioni","disegnare","contare"], correct:0},
+      {q:"Il mcm serve soprattutto a…", opts:["trovare il denominatore comune","scomporre","misurare"], correct:0},
+      {q:"Di solito, quale è più grande?", opts:["il mcm","il MCD","sono sempre uguali"], correct:0},
+    ],
+    [ // L4
+      {q:"MCD(8, 15)? (non hanno fattori comuni)", opts:["1","8","120"], correct:0},
+      {q:"Se a divide b, allora MCD(a, b) = …", opts:["a","b","1"], correct:0},
+      {q:"Se a divide b, allora mcm(a, b) = …", opts:["b","a","a×b"], correct:0},
+      {q:"189 è divisibile per 9? (1+8+9=18)", opts:["sì","no","solo per 2"], correct:0},
+      {q:"Quale coppia è 'prima tra loro'?", opts:["9 e 14","6 e 8","10 e 15"], correct:0},
+      {q:"Il MCD di due primi diversi (es. 3 e 7) è…", opts:["1","3","21"], correct:0},
+    ],
+  ];
+  let qLevel=0, qc=0, qs=0, qCorrect=0;
+  function setQuizLevel(lvl){ qLevel=lvl; qc=0; qs=0; document.getElementById("quiz-level").innerHTML=levelBar(lvl); showQuiz(); }
+  function showQuiz(){
+    const data=quizLevels[qLevel];
+    const box=document.getElementById("quiz-box");
+    const pr=document.getElementById("quiz-prog");
+    if(qc>=data.length){ box.innerHTML=""; levelResult(pr, qs, data.length, qLevel, 4, "setQuizLevel"); return; }
+    const it=data[qc];
+    const order=shuffle(it.opts.map((o,i)=>i));
+    const shown=order.map(k=>it.opts[k]);
+    qCorrect=order.indexOf(it.correct);
+    pr.textContent=`Domanda ${qc+1} di ${data.length}`;
+    box.innerHTML=`
+      <div class="ex">
+        <div class="qnum">Domanda ${qc+1}</div>
+        <div class="qtext">${it.q}</div>
+        <div class="options">
+          ${shown.map((o,i)=>`<button class="opt" onclick="quizAns(${i})">${o}</button>`).join("")}
+        </div>
+        <div class="feedback" id="qfb"></div>
+      </div>`;
+  }
+  function quizAns(i){
+    const opts=document.querySelectorAll("#quiz-box .opt");
+    const fb=document.getElementById("qfb");
+    if(i===qCorrect){
+      opts[i].classList.add("correct");
+      fb.textContent="✅ Giusto!"; fb.className="feedback ok";
+      qs++; opts.forEach(o=>o.disabled=true);
+      setTimeout(()=>{ qc++; showQuiz(); },1100);
+    } else {
+      opts[i].classList.add("wrong");
+      fb.textContent="Riprova 🙂"; fb.className="feedback no";
+    }
+  }
+
+  /* ============ SEZIONE 3 — ABBINA ============ */
+  const matchLevels = [
+    [ // L1 numero ↔ scomposizione
+      {l:"12", r:"2² × 3"},{l:"18", r:"2 × 3²"},{l:"20", r:"2² × 5"},
+      {l:"30", r:"2 × 3 × 5"},{l:"8", r:"2³"},{l:"45", r:"3² × 5"},
+    ],
+    [ // L2 coppia ↔ MCD
+      {l:"MCD(12, 18)", r:"6"},{l:"MCD(8, 12)", r:"4"},{l:"MCD(15, 9)", r:"3"},
+      {l:"MCD(20, 30)", r:"10"},{l:"MCD(7, 13)", r:"1"},{l:"MCD(10, 25)", r:"5"},
+    ],
+    [ // L3 coppia ↔ mcm
+      {l:"mcm(4, 6)", r:"12"},{l:"mcm(6, 9)", r:"18"},{l:"mcm(5, 7)", r:"35"},
+      {l:"mcm(10, 15)", r:"30"},{l:"mcm(8, 12)", r:"24"},{l:"mcm(2, 3)", r:"6"},
+    ],
+    [ // L4 criterio ↔ regola
+      {l:"per 2", r:"finisce con cifra pari"},{l:"per 3", r:"somma cifre divisibile per 3"},{l:"per 5", r:"finisce per 0 o 5"},
+      {l:"per 9", r:"somma cifre divisibile per 9"},{l:"per 10", r:"finisce per 0"},{l:"per 4", r:"ultime due cifre divisibili per 4"},
+    ],
+  ];
+  let mLevel=0, selL=null, matched=0, firstTry=0, spoiled;
+  function setMatchLevel(lvl){
+    mLevel=lvl; selL=null; matched=0; firstTry=0; spoiled=new Set();
+    const pairs=matchLevels[lvl];
+    document.getElementById("match-level").innerHTML=levelBar(lvl);
+    const grid=document.getElementById("match-grid");
+    const left=pairs.map((p,i)=>`<button class="match-btn" id="ml${i}" onclick="pickL(${i})">${p.l}</button>`).join("");
+    const order=shuffle(pairs.map((p,i)=>i));
+    const right=order.map(i=>`<button class="match-btn" id="mr${i}" onclick="pickR(${i})">${pairs[i].r}</button>`).join("");
+    grid.innerHTML=`<div class="match-col">${left}</div><div class="match-col">${right}</div>`;
+    document.getElementById("match-prog").textContent=`Coppie collegate: 0 di ${pairs.length}`;
+  }
+  function pickL(i){
+    const btn=document.getElementById("ml"+i);
+    if(btn.classList.contains("done")) return;
+    document.querySelectorAll(".match-btn.sel").forEach(b=>b.classList.remove("sel"));
+    selL=i; btn.classList.add("sel");
+  }
+  function pickR(i){
+    if(selL===null) return;
+    const rBtn=document.getElementById("mr"+i);
+    if(rBtn.classList.contains("done")) return;
+    const lBtn=document.getElementById("ml"+selL);
+    const pairs=matchLevels[mLevel];
+    if(selL===i){
+      lBtn.classList.remove("sel"); lBtn.classList.add("done"); rBtn.classList.add("done");
+      if(!spoiled.has(selL)) firstTry++;
+      selL=null; matched++;
+      const pr=document.getElementById("match-prog");
+      if(matched>=pairs.length){
+        levelResult(pr, firstTry, pairs.length, mLevel, Math.max(pairs.length-1,1), "setMatchLevel");
+      } else {
+        pr.textContent=`Coppie collegate: ${matched} di ${pairs.length}`;
+      }
+    } else {
+      spoiled.add(selL);
+      rBtn.classList.add("flash");
+      setTimeout(()=>rBtn.classList.remove("flash"),500);
+      lBtn.classList.remove("sel"); selL=null;
+    }
+  }
+
+  // avvio
+  setCalcLevel(0);
+  setQuizLevel(0);
+  setMatchLevel(0);
+</script>
+<script>
+  if ('serviceWorker' in navigator) { navigator.serviceWorker.register('./service-worker.js'); }
+</script>
+</body>
+</html>

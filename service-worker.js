@@ -1,4 +1,4 @@
-const CACHE = 'matematica-irene-v3';
+const CACHE = 'matematica-irene-v4';
 
 const ASSETS = [
   './',
@@ -7,6 +7,10 @@ const ASSETS = [
   './insiemi-numerici-allenamento.html',
   './insiemi-numerici-overview.mp3',
   './insiemi-numerici-infografica.png',
+  './divisibilita.html',
+  './divisibilita-allenamento.html',
+  './divisibilita-overview.mp3',
+  './divisibilita-infografica.png',
   './style.css',
   './app.js',
   './alert.js',
