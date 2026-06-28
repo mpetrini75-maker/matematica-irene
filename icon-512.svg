@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="100" fill="#FAF6EE"/>
+  <rect width="512" height="512" rx="100" fill="none" stroke="#C8651B" stroke-width="24"/>
+  <path d="M256 160 C256 160 180 148 120 168 L120 360 C180 340 256 352 256 352
+           C256 352 332 340 392 360 L392 168 C332 148 256 160 256 160Z"
+        fill="#C8651B" opacity="0.15"/>
+  <line x1="256" y1="160" x2="256" y2="352" stroke="#C8651B" stroke-width="14" stroke-linecap="round"/>
+  <path d="M120 168 C180 148 256 160 256 160" fill="none" stroke="#C8651B" stroke-width="14" stroke-linecap="round"/>
+  <path d="M392 168 C332 148 256 160 256 160" fill="none" stroke="#C8651B" stroke-width="14" stroke-linecap="round"/>
+  <path d="M120 168 L120 360 C180 340 256 352 256 352" fill="none" stroke="#C8651B" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M392 168 L392 360 C332 340 256 352 256 352" fill="none" stroke="#C8651B" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="163" y="300" font-family="Georgia,serif" font-size="72" font-weight="bold" fill="#C8651B" text-anchor="middle">A</text>
+  <text x="349" y="300" font-family="Georgia,serif" font-size="60" fill="#C8651B" text-anchor="middle">a</text>
+</svg>

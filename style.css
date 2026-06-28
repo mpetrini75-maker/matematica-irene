@@ -1,0 +1,141 @@
+/* ===== Matematica di Irene — foglio di stile condiviso (tema viola) ===== */
+:root{
+  --bg:#FAF6EE;
+  --card:#FFFFFF;
+  --ink:#2F2A24;
+  --accent:#6E5BA6;       /* viola/indaco */
+  --accent-soft:#ECE4F5;
+  --accent-scuro:#574485;
+  --green:#3E8E5A; --green-soft:#E2F0E6;
+  --red:#C2492F;   --red-soft:#F6E1DB;
+  --blue:#3B6EA5;  --blue-soft:#E2ECF5;
+  --giallo:#E0A82E; --giallo-soft:#FaF0D6;
+  --ombra:rgba(43,43,43,0.08);
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family:"Lexend","Trebuchet MS",Verdana,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.7;
+  letter-spacing:0.3px;
+  padding:24px 14px 60px;
+}
+.wrap{max-width:640px;margin:0 auto;}
+
+.backbtn{display:inline-block;background:var(--accent-soft);color:var(--accent);
+  text-decoration:none;border-radius:12px;padding:8px 16px;font-size:0.98rem;font-weight:bold;margin-bottom:14px;}
+
+h1{color:var(--accent);font-size:1.7rem;text-align:center;margin:0 0 6px;}
+.sub{text-align:center;color:#8a7f70;margin:0 0 26px;font-size:1rem;}
+
+.card{
+  background:var(--card);border-radius:18px;padding:22px 20px;
+  margin-bottom:22px;box-shadow:0 4px 14px var(--ombra);
+  border:1px solid #efe7da;
+}
+.card h2{margin:0 0 14px;font-size:1.25rem;color:var(--accent);display:flex;align-items:center;gap:8px;}
+.card h3{margin:18px 0 8px;font-size:1.08rem;color:var(--accent);}
+.card p{margin:8px 0;}
+
+table{width:100%;border-collapse:collapse;margin:10px 0;}
+td,th{padding:10px;text-align:left;border-bottom:2px solid var(--accent-soft);font-size:1.02rem;}
+th{color:var(--accent);}
+td.c,th.c{text-align:center;}
+.hl{background:var(--accent-soft);border-radius:8px;font-weight:bold;color:var(--accent);}
+
+/* riquadri colorati */
+.tip{background:var(--accent-soft);border-radius:10px;padding:10px 14px;font-size:0.98rem;margin:12px 0;}
+.tip-green{background:var(--green-soft);border-radius:10px;padding:10px 14px;font-size:0.98rem;margin:12px 0;color:#2f6b45;}
+.tip-yellow{background:var(--giallo-soft);border-radius:10px;padding:10px 14px;font-size:0.98rem;margin:12px 0;}
+.warn{background:var(--red-soft);border-radius:10px;padding:10px 14px;font-size:0.98rem;margin:12px 0;color:#8f3320;}
+.example{background:#F8F6FB;border-left:4px solid var(--accent);border-radius:8px;padding:10px 14px;margin:12px 0;}
+
+/* formula in evidenza */
+.formula{
+  background:var(--accent);color:#fff;border-radius:14px;text-align:center;
+  font-size:1.4rem;font-weight:bold;padding:16px;margin:14px 0;letter-spacing:1px;
+}
+
+/* blocchi ASCII / mappe (monospace) */
+pre.ascii{
+  background:#3a3052;color:#efeaf7;border-radius:12px;padding:14px 16px;
+  overflow-x:auto;font-size:0.92rem;line-height:1.5;margin:12px 0;
+}
+
+ul,ol{margin:8px 0 8px 4px;padding-left:22px;}
+li{margin:4px 0;}
+
+/* esercizi + soluzioni a scomparsa */
+.solbtn{
+  display:inline-block;background:var(--accent);color:#fff;border:none;border-radius:12px;
+  padding:10px 20px;font-size:1rem;font-weight:bold;cursor:pointer;font-family:inherit;margin-top:6px;
+}
+.sol{display:none;margin-top:12px;}
+.sol.open{display:block;}
+
+/* callout allenamento */
+.allena{
+  background:var(--accent-soft);border-radius:16px;padding:18px 20px;text-align:center;margin:8px 0 22px;
+}
+.allena a{
+  display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
+  border-radius:12px;padding:14px 22px;font-size:1.08rem;font-weight:bold;margin-top:8px;
+}
+
+/* ===== video esplicativi (anteprima YouTube, caricamento al click) ===== */
+.videobox{background:linear-gradient(180deg,#fff 0%,#F8F6FB 100%);}
+.videobox h2{margin-bottom:12px;}
+.video{
+  position:relative;width:100%;aspect-ratio:16/9;border-radius:14px;overflow:hidden;
+  cursor:pointer;background:#3a3052;box-shadow:0 4px 14px var(--ombra);
+}
+.video img{width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform .25s ease,filter .25s ease;}
+.video:hover img,.video:focus-visible img{transform:scale(1.04);filter:brightness(.85);}
+.video .video-play{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:72px;height:72px;border-radius:50%;background:rgba(110,91,166,0.92);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 18px rgba(0,0,0,0.35);
+  transition:transform .2s ease,background .2s ease;
+}
+.video:hover .video-play,.video:focus-visible .video-play{
+  transform:translate(-50%,-50%) scale(1.1);background:var(--accent);
+}
+.video .video-play::after{
+  content:"";display:block;margin-left:5px;
+  border-style:solid;border-width:13px 0 13px 22px;
+  border-color:transparent transparent transparent #fff;
+}
+.video:focus-visible{outline:3px solid var(--accent);outline-offset:3px;}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+.video.playing{cursor:default;}
+.video-meta{font-size:0.9rem;color:#8a7f70;margin:10px 0 0;text-align:center;}
+.video-meta a{color:var(--accent);font-weight:bold;text-decoration:none;}
+
+/* ===== esercizi interattivi dentro la lezione ===== */
+.qit{margin:14px 0;padding-bottom:10px;border-bottom:1px dashed #e7ddef;}
+.qit:last-child{border-bottom:none;}
+.qtxt{margin:0 0 8px;font-size:1.05rem;}
+.vfrow{display:flex;gap:8px;flex-wrap:wrap;}
+.vfbtn{background:var(--bg);border:2px solid var(--accent-soft);border-radius:10px;
+  padding:8px 18px;font-size:1rem;cursor:pointer;font-family:inherit;color:var(--ink);font-weight:bold;transition:all .15s;}
+.vfbtn:hover{border-color:var(--accent);}
+.vfbtn:disabled{cursor:default;}
+.vfbtn.ok{background:var(--green-soft);border-color:var(--green);color:var(--green);}
+.vfbtn.no{background:var(--red-soft);border-color:var(--red);color:var(--red);}
+.fillrow{display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
+.fillin{width:130px;font-family:inherit;font-size:1.1rem;padding:9px 12px;
+  border:2px solid var(--accent-soft);border-radius:10px;background:var(--bg);color:var(--ink);}
+.fillin:focus{outline:none;border-color:var(--accent);}
+.fillin.ok{border-color:var(--green);background:var(--green-soft);}
+.fillin.no{border-color:var(--red);background:var(--red-soft);}
+.ckbtn{background:var(--accent);color:#fff;border:none;border-radius:10px;
+  padding:9px 18px;font-size:0.95rem;cursor:pointer;font-family:inherit;}
+.efb{font-size:0.98rem;font-weight:bold;margin-top:8px;min-height:20px;}
+.efb.ok{color:var(--green);}
+.efb.no{color:var(--red);}
+
+footer{text-align:center;margin-top:30px;font-size:0.92rem;color:#9a9a9a;}

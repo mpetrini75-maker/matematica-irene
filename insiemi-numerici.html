@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matematica - Numeri naturali e interi (N e Z)</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#FAF6EE">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Matematica di Irene">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="backbtn" href="index.html">← Indice</a>
+  <h1>🔢 Numeri naturali e interi</h1>
+  <p class="sub">Gli insiemi <b>N</b> e <b>Z</b>: i mattoni di tutta la matematica</p>
+
+  <div class="allena">
+    🏋️ <b>Vuoi allenarti?</b><br>
+    <a href="insiemi-numerici-allenamento.html">▶ Apri l'allenamento</a>
+  </div>
+
+  <div class="card">
+    <p>📌 <b>A cosa serve:</b> in matematica i numeri sono raccolti in <b>famiglie</b> chiamate <b>insiemi numerici</b>. In questo primo mattoncino conosci le due famiglie di base: i <b>numeri naturali (N)</b> e i <b>numeri interi (Z)</b>. Impari a fare le operazioni, a usare le <b>potenze</b>, a risolvere le <b>espressioni</b> e a gestire i <b>numeri negativi</b> con la regola dei segni. È la base che regge frazioni, calcolo letterale ed equazioni.</p>
+  </div>
+
+  <div class="card">
+    <h2>🎧 Overview vocale</h2>
+    <p style="margin-top:0;color:#8a7f70;">Ascolta la spiegazione di questo mattoncino mentre studi o fai altro.</p>
+    <audio controls preload="none" style="width:100%;">
+      <source src="insiemi-numerici-overview.mp3" type="audio/mpeg">
+      Il tuo browser non supporta l'audio.
+    </audio>
+    <h2 style="margin-top:18px;">🗺️ Infografica</h2>
+    <p style="margin-top:0;color:#8a7f70;">Tutto lo schema di N e Z in un'unica immagine da guardare.</p>
+    <a href="insiemi-numerici-infografica.png" data-audio="insiemi-numerici-overview.mp3"
+       style="display:block;text-align:center;background:var(--green-soft);color:var(--green);
+       text-decoration:none;border:2px solid var(--green);border-radius:14px;
+       padding:16px;font-size:1.1rem;font-weight:bold;">
+      🗺️ Apri l'infografica →
+    </a>
+  </div>
+
+  <div class="card">
+    <h2>👨‍👩‍👧 1. Le famiglie di numeri</h2>
+    <p>Man mano che servono numeri "nuovi", la matematica allarga la famiglia. Per ora ci bastano le prime due (le altre le vedrai nei prossimi mattoncini):</p>
+    <table>
+      <tr><th>Simbolo</th><th>Nome</th><th>Quali numeri contiene</th></tr>
+      <tr><td class="c hl">N</td><td><b>Naturali</b></td><td>0, 1, 2, 3, 4, … (per contare)</td></tr>
+      <tr><td class="c hl">Z</td><td><b>Interi</b></td><td>…, −3, −2, −1, 0, +1, +2, +3, … (anche i negativi)</td></tr>
+      <tr><td class="c">Q</td><td>Razionali</td><td>le frazioni (mattoncino 3)</td></tr>
+      <tr><td class="c">R</td><td>Reali</td><td>tutti, anche √2 e π (più avanti)</td></tr>
+    </table>
+    <div class="tip">💡 <b>"Appartiene"</b> si scrive con il simbolo <b>∈</b>. Esempio: <b>5 ∈ N</b> si legge «5 appartiene ai naturali». Invece <b>−5 ∉ N</b> («non appartiene»), perché −5 è negativo.</div>
+  </div>
+
+  <div class="card">
+    <h2>1️⃣ 2. I numeri naturali (N)</h2>
+    <p>Sono i numeri che usi per <b>contare</b>: <b>0, 1, 2, 3, 4, 5, …</b> Vanno avanti all'infinito e ognuno ha un <b>precedente</b> e un <b>successivo</b> (il successivo di 7 è 8).</p>
+    <p>Con i naturali fai le <b>quattro operazioni</b>, ma attenzione: non tutte "restano dentro" N.</p>
+    <table>
+      <tr><th>Operazione</th><th class="c">Esempio</th><th>Resta in N?</th></tr>
+      <tr><td><b>Addizione</b> (+)</td><td class="c">3 + 5 = 8</td><td>✅ sempre</td></tr>
+      <tr><td><b>Moltiplicazione</b> (×)</td><td class="c">3 × 5 = 15</td><td>✅ sempre</td></tr>
+      <tr><td><b>Sottrazione</b> (−)</td><td class="c">3 − 5 = −2</td><td>❌ no (esce da N!)</td></tr>
+      <tr><td><b>Divisione</b> (÷)</td><td class="c">3 ÷ 5 = 0,6</td><td>❌ non sempre</td></tr>
+    </table>
+    <div class="tip">🧠 Proprio perché <b>3 − 5</b> non si può fare nei naturali, è "nato" l'insieme degli <b>interi Z</b> con i numeri negativi (lo vedi tra poco). E per la divisione "nasceranno" le frazioni (Q).</div>
+  </div>
+
+  <div class="card">
+    <h2>🎁 3. Le proprietà delle operazioni</h2>
+    <p>Sono "regole-scorciatoia" che valgono per addizione e moltiplicazione e che ti fanno calcolare più in fretta.</p>
+    <table>
+      <tr><th>Proprietà</th><th class="c">Esempio</th></tr>
+      <tr><td><b>Commutativa</b><br>(posso scambiare l'ordine)</td><td class="c">4 + 7 = 7 + 4<br>2 × 5 = 5 × 2</td></tr>
+      <tr><td><b>Associativa</b><br>(posso raggruppare come voglio)</td><td class="c">(2 + 3) + 4 = 2 + (3 + 4)</td></tr>
+      <tr><td><b>Distributiva</b><br>(la × si "distribuisce" sulla +)</td><td class="c">3 × (4 + 5) = 3×4 + 3×5</td></tr>
+      <tr><td><b>Elemento neutro</b></td><td class="c">8 + <b>0</b> = 8 · 8 × <b>1</b> = 8</td></tr>
+    </table>
+    <div class="tip-yellow">⚠️ La commutativa e l'associativa <b>NON</b> valgono per sottrazione e divisione: 8 − 3 ≠ 3 − 8.</div>
+  </div>
+
+  <div class="card">
+    <h2>⚡ 4. Le potenze</h2>
+    <p>Una <b>potenza</b> è una moltiplicazione di fattori tutti uguali, scritta in modo corto:</p>
+    <div class="formula">aⁿ = a × a × … × a  (n volte)</div>
+    <p><b>a</b> = base (il numero che si ripete) · <b>n</b> = esponente (quante volte). <br>Esempio: <b>2⁴ = 2 × 2 × 2 × 2 = 16</b>.</p>
+    <div class="example"><b>Casi speciali da ricordare:</b><br>
+      • a<sup>1</sup> = a → 7<sup>1</sup> = 7<br>
+      • a<sup>0</sup> = 1 (qualsiasi numero, tranne 0) → 9<sup>0</sup> = 1<br>
+      • 1<sup>n</sup> = 1 → 1<sup>100</sup> = 1</div>
+    <h3>Le proprietà delle potenze</h3>
+    <table>
+      <tr><th>Regola</th><th class="c">In simboli</th><th class="c">Esempio</th></tr>
+      <tr><td>Stessa base, <b>×</b> → <b>sommo</b> gli esponenti</td><td class="c">aᵐ × aⁿ = a<sup>m+n</sup></td><td class="c">2² × 2³ = 2⁵</td></tr>
+      <tr><td>Stessa base, <b>÷</b> → <b>sottraggo</b></td><td class="c">aᵐ ÷ aⁿ = a<sup>m−n</sup></td><td class="c">2⁵ ÷ 2² = 2³</td></tr>
+      <tr><td>Potenza di potenza → <b>moltiplico</b></td><td class="c">(aᵐ)ⁿ = a<sup>m×n</sup></td><td class="c">(2²)³ = 2⁶</td></tr>
+      <tr><td>Stesso esponente, <b>×</b></td><td class="c">aⁿ × bⁿ = (a×b)ⁿ</td><td class="c">2³ × 5³ = 10³</td></tr>
+    </table>
+    <div class="warn">⚠️ <b>Errore classico:</b> 2² × 2³ <b>NON</b> fa 4⁵! La base resta uguale (2), si sommano solo gli esponenti → 2⁵.</div>
+  </div>
+
+  <div class="card videobox">
+    <h2>🎬 Video — Le proprietà delle potenze</h2>
+    <div class="video" data-id="mzRdsXT1Oic" role="button" tabindex="0" aria-label="Riproduci il video sulle proprietà delle potenze" onclick="playVideo(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(this);}">
+      <img src="https://i.ytimg.com/vi/mzRdsXT1Oic/hqdefault.jpg" alt="Anteprima: le proprietà delle potenze" loading="lazy">
+      <span class="video-play"></span>
+    </div>
+    <p class="video-meta">📺 SpazioMATH · <a href="https://www.youtube.com/watch?v=mzRdsXT1Oic" target="_blank" rel="noopener">Apri su YouTube ↗</a></p>
+  </div>
+
+  <div class="card">
+    <h2>🧮 5. Le espressioni: l'ordine delle operazioni</h2>
+    <p>In un'espressione non si calcola da sinistra a destra "alla rinfusa". C'è un <b>ordine preciso</b>:</p>
+    <pre class="ascii">1) le PARENTESI  →  prima ( ), poi [ ], poi { }
+2) le POTENZE
+3) MOLTIPLICAZIONI e DIVISIONI  (nell'ordine in cui compaiono)
+4) ADDIZIONI e SOTTRAZIONI      (nell'ordine in cui compaiono)</pre>
+    <div class="tip">🎨 <b>Trucco per ricordarlo:</b> <b>P-P-M-A</b> → «<i>Per Piacere Mangia Adesso</i>» (Parentesi, Potenze, Moltiplicazioni/divisioni, Addizioni/sottrazioni).</div>
+    <h3>✏️ Esempio svolto</h3>
+    <div class="example"><b>10 + 2 × 3² − (4 + 1)</b><br>
+      1. parentesi: (4 + 1) = 5 → 10 + 2 × 3² − 5<br>
+      2. potenza: 3² = 9 → 10 + 2 × 9 − 5<br>
+      3. moltiplicazione: 2 × 9 = 18 → 10 + 18 − 5<br>
+      4. addizioni e sottrazioni: 10 + 18 − 5 = <b>23</b></div>
+  </div>
+
+  <div class="card">
+    <h2>➖ 6. I numeri interi (Z)</h2>
+    <p>I numeri <b>interi</b> sono i naturali <b>più</b> i loro opposti negativi:</p>
+    <div class="formula">… −3  −2  −1  0  +1  +2  +3 …</div>
+    <p>Servono ogni volta che si "va sotto zero": i gradi sotto zero (<b>−5 °C</b>), i soldi in debito, i piani interrati di un ascensore (<b>−1</b>).</p>
+    <h3>La retta dei numeri</h3>
+    <pre class="ascii">  ←—•——•——•——•——•——•——•—→
+    −3  −2  −1   0  +1  +2  +3
+   più piccolo  ←      →  più grande</pre>
+    <p>Su questa retta, <b>più vai a destra, più il numero è grande</b>. Quindi <b>−1 è maggiore di −5</b> (−1 sta più a destra). Attenzione: con i negativi sembra il contrario! <b>−5 &lt; −1</b>.</p>
+    <h3>Il valore assoluto | |</h3>
+    <p>Il <b>valore assoluto</b> di un numero è la sua "distanza dallo zero", quindi è <b>sempre positivo</b>. Si scrive tra due barrette:</p>
+    <div class="example">| +6 | = 6 &nbsp;·&nbsp; | −6 | = 6 &nbsp;·&nbsp; | 0 | = 0</div>
+  </div>
+
+  <div class="card">
+    <h2>🚦 7. Operazioni in Z: la regola dei segni</h2>
+    <h3>➕ Addizione e sottrazione</h3>
+    <ul>
+      <li><b>Segni uguali</b> (concordi): <b>sommo</b> i numeri e tengo il segno.<br><span class="hl">(+3) + (+5) = +8</span> &nbsp; <span class="hl">(−3) + (−5) = −8</span></li>
+      <li><b>Segni diversi</b> (discordi): <b>sottraggo</b> (grande meno piccolo) e tengo il segno del più grande.<br><span class="hl">(+7) + (−3) = +4</span> &nbsp; <span class="hl">(−7) + (+3) = −4</span></li>
+    </ul>
+    <div class="tip-yellow">🧠 <b>Trucco "soldi":</b> il + è quello che hai, il − è un debito. (+7) + (−3) = ho 7, devo 3 → mi restano <b>+4</b>. (−7) + (+3) = devo 7, ne ho 3 → resto in debito di <b>−4</b>.</div>
+    <h3>✖️ Moltiplicazione e divisione</h3>
+    <p>Qui conta solo se i segni sono uguali o diversi:</p>
+    <table>
+      <tr><th class="c">Segni</th><th class="c">Risultato</th><th class="c">Esempio</th></tr>
+      <tr><td class="c">+ × +</td><td class="c hl">+</td><td class="c">(+2)×(+3) = +6</td></tr>
+      <tr><td class="c">− × −</td><td class="c hl">+</td><td class="c">(−2)×(−3) = +6</td></tr>
+      <tr><td class="c">+ × −</td><td class="c hl">−</td><td class="c">(+2)×(−3) = −6</td></tr>
+      <tr><td class="c">− × +</td><td class="c hl">−</td><td class="c">(−2)×(+3) = −6</td></tr>
+    </table>
+    <div class="tip">🎨 <b>In due parole:</b> segni <b>uguali → +</b>, segni <b>diversi → −</b>. (Vale uguale per la divisione.)</div>
+    <div class="warn">⚠️ Non confondere! Nella <b>somma</b> (−3) + (−5) = −8, ma nella <b>moltiplicazione</b> (−3) × (−5) = +15. Sono regole diverse!</div>
+  </div>
+
+  <div class="card videobox">
+    <h2>🎬 Video — I numeri relativi e la regola dei segni</h2>
+    <div class="video" data-id="QXusMzBAS60" role="button" tabindex="0" aria-label="Riproduci il video sui numeri relativi" onclick="playVideo(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(this);}">
+      <img src="https://i.ytimg.com/vi/QXusMzBAS60/hqdefault.jpg" alt="Anteprima: i numeri relativi" loading="lazy">
+      <span class="video-play"></span>
+    </div>
+    <p class="video-meta">📺 Schooltoon · <a href="https://www.youtube.com/watch?v=QXusMzBAS60" target="_blank" rel="noopener">Apri su YouTube ↗</a></p>
+  </div>
+
+  <div class="card">
+    <h2>🗺️ Mappa da tenere in mente</h2>
+    <pre class="ascii">     NUMERI NATURALI (N): 0,1,2,3...
+                |   (+ e × sempre ok; − e ÷ no)
+                ↓  servono i negativi
+     NUMERI INTERI (Z): ...−2,−1,0,+1,+2...
+                |
+        ┌───────┴───────┐
+     SEGNI               POTENZE
+   uguali → +           aᵐ×aⁿ = a^(m+n)
+   diversi → −          aᵐ÷aⁿ = a^(m−n)
+                ESPRESSIONI: P · P · M · A</pre>
+  </div>
+
+  <div class="card">
+    <h2>✅ Esercizi (prova tu!)</h2>
+    <p style="margin-top:0;color:#8a7f70;">Rispondi direttamente qui sotto: tocca <b>Vero/Falso</b> o scrivi il numero e premi <b>Controlla</b>. Se sbagli ti spiego subito! 🙂</p>
+    <h3>Esercizio 1 — Vero o Falso</h3>
+    <div id="es1"></div>
+    <h3>Esercizio 2 — Calcola le potenze</h3>
+    <div id="es2"></div>
+    <h3>Esercizio 3 — Operazioni con i segni</h3>
+    <div id="es3"></div>
+    <h3>Esercizio 4 — Espressioni</h3>
+    <div id="es4"></div>
+  </div>
+
+  <div class="allena">
+    🏆 Quando sai fare gli esercizi senza guardare le soluzioni, sei pronta!<br>
+    <a href="insiemi-numerici-allenamento.html">🏋️ Allenati con l'app</a>
+  </div>
+
+  <footer>🔗 <a href="index.html">Indice</a> · prossimo → <i>Divisibilità, numeri primi, MCD e mcm</i></footer>
+</div>
+<script src="app.js"></script>
+<script>
+  esVF("es1", [
+    {t:"Lo zero è un numero naturale.", a:true,  sol:"Sì, 0 fa parte di N."},
+    {t:"−5 appartiene all'insieme N.",  a:false, sol:"È negativo: sta in Z, non in N."},
+    {t:"−2 è maggiore di −9.",          a:true,  sol:"−2 sta più a destra sulla retta, quindi è maggiore."},
+    {t:"2³ è uguale a 6.",              a:false, sol:"2³ = 2×2×2 = 8 (non 2×3)."},
+    {t:"| −8 | = 8.",                   a:true,  sol:"Il valore assoluto è sempre positivo."},
+  ]);
+  esFill("es2", [
+    {q:"5² = ?",  a:25,   sol:"5×5 = 25."},
+    {q:"2⁵ = ?",  a:32,   sol:"2×2×2×2×2 = 32."},
+    {q:"10³ = ?", a:1000, sol:"10×10×10 = 1000."},
+    {q:"7⁰ = ?",  a:1,    sol:"Qualsiasi numero (≠0) elevato a 0 fa 1."},
+    {q:"3³ = ?",  a:27,   sol:"3×3×3 = 27."},
+  ]);
+  esFill("es3", [
+    {q:"(−6) + (−4) = ?", a:-10, sol:"Segni uguali: sommo e tengo il segno."},
+    {q:"(+8) + (−3) = ?", a:5,   sol:"Segni diversi: 8−3=5, vince il +."},
+    {q:"(−2) × (−5) = ?", a:10,  sol:"Segni uguali nella ×: +."},
+    {q:"(−12) ÷ (+4) = ?",a:-3,  sol:"Segni diversi nella ÷: −."},
+    {q:"(−7) + (+10) = ?",a:3,   sol:"10−7=3, vince il +."},
+  ]);
+  esFill("es4", [
+    {q:"8 + 3 × 2 = ?",     a:14, sol:"Prima la ×: 8+6 = 14."},
+    {q:"(8 + 3) × 2 = ?",   a:22, sol:"Prima la parentesi: 11×2 = 22."},
+    {q:"20 − 2 × 3² = ?",   a:2,  sol:"Potenza poi ×: 20 − 18 = 2."},
+  ]);
+</script>
+<script src="lightbox.js"></script>
+<script>
+  if ('serviceWorker' in navigator) { navigator.serviceWorker.register('./service-worker.js'); }
+</script>
+</body>
+</html>
