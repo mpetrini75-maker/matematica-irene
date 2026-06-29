@@ -1,4 +1,4 @@
-const CACHE = 'matematica-irene-v8';
+const CACHE = 'matematica-irene-v9';
 
 const ASSETS = [
   './',
@@ -27,6 +27,10 @@ const ASSETS = [
   './scomposizione-allenamento.html',
   './scomposizione-overview.mp3',
   './scomposizione-infografica.png',
+  './frazioni-algebriche.html',
+  './frazioni-algebriche-allenamento.html',
+  './frazioni-algebriche-overview.mp3',
+  './frazioni-algebriche-infografica.png',
   './style.css',
   './app.js',
   './alert.js',
