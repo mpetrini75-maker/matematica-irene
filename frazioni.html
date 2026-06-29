@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matematica - I numeri razionali (le frazioni)</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#FAF6EE">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Matematica di Irene">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="backbtn" href="index.html">← Indice</a>
+  <h1>🍕 I numeri razionali (le frazioni)</h1>
+  <p class="sub">L'insieme Q: pezzi di interi, e come usarli</p>
+
+  <div class="allena">
+    🏋️ <b>Vuoi allenarti?</b><br>
+    <a href="frazioni-allenamento.html">▶ Apri l'allenamento</a>
+  </div>
+
+  <div class="card">
+    <p>📌 <b>A cosa serve:</b> non sempre le cose vengono "intere": mezza pizza, tre quarti d'ora, il 20% di sconto. Le <b>frazioni</b> (l'insieme <b>Q</b>) servono a contare i <b>pezzi</b>. Qui impari a riconoscerle, semplificarle e fare le quattro operazioni — e a passare tra <b>frazioni, decimali e percentuali</b>.</p>
+  </div>
+
+  <div class="card">
+    <h2>🎧 Overview vocale</h2>
+    <p style="margin-top:0;color:#8a7f70;">Ascolta la spiegazione di questo mattoncino mentre studi o fai altro.</p>
+    <audio controls preload="none" style="width:100%;">
+      <source src="frazioni-overview.mp3" type="audio/mpeg">
+      Il tuo browser non supporta l'audio.
+    </audio>
+    <h2 style="margin-top:18px;">🗺️ Infografica</h2>
+    <p style="margin-top:0;color:#8a7f70;">Tutte le frazioni (tipi, semplificazione, operazioni, percentuali) in un'immagine.</p>
+    <a href="frazioni-infografica.png" data-audio="frazioni-overview.mp3"
+       style="display:block;text-align:center;background:var(--green-soft);color:var(--green);
+       text-decoration:none;border:2px solid var(--green);border-radius:14px;
+       padding:16px;font-size:1.1rem;font-weight:bold;">
+      🗺️ Apri l'infografica →
+    </a>
+  </div>
+
+  <div class="card">
+    <h2>🍕 1. Cos'è una frazione</h2>
+    <p>Una frazione è formata da due numeri separati da una linea:</p>
+    <div class="formula">numeratore / denominatore</div>
+    <ul>
+      <li><b>Denominatore</b> (sotto): in <b>quante parti</b> è diviso l'intero.</li>
+      <li><b>Numeratore</b> (sopra): <b>quante parti</b> prendo.</li>
+    </ul>
+    <div class="example"><b>3/4 di pizza</b>: la pizza è divisa in 4 fette e ne prendo 3.</div>
+    <div class="tip">💡 La linea di frazione è una <b>divisione</b>: <b>3/4 = 3 : 4 = 0,75</b>. Il denominatore non può mai essere <b>0</b> (non si divide per zero).</div>
+  </div>
+
+  <div class="card videobox">
+    <h2>🎬 Video — I numeri razionali (le frazioni)</h2>
+    <div class="video" data-id="oyCffy6mMGE" role="button" tabindex="0" aria-label="Riproduci il video sui numeri razionali" onclick="playVideo(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(this);}">
+      <img src="https://i.ytimg.com/vi/oyCffy6mMGE/hqdefault.jpg" alt="Anteprima: i numeri razionali" loading="lazy">
+      <span class="video-play"></span>
+    </div>
+    <p class="video-meta">📺 Schooltoon · <a href="https://www.youtube.com/watch?v=oyCffy6mMGE" target="_blank" rel="noopener">Apri su YouTube ↗</a></p>
+  </div>
+
+  <div class="card">
+    <h2>🧱 2. I tipi di frazione</h2>
+    <table>
+      <tr><th>Tipo</th><th>Com'è</th><th class="c">Esempio</th></tr>
+      <tr><td><b>Propria</b></td><td>numeratore &lt; denominatore (vale meno di 1)</td><td class="c hl">2/5</td></tr>
+      <tr><td><b>Impropria</b></td><td>numeratore &gt; denominatore (vale più di 1)</td><td class="c hl">7/3</td></tr>
+      <tr><td><b>Apparente</b></td><td>il numeratore è multiplo del denominatore (vale un intero)</td><td class="c hl">6/3 = 2</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>♻️ 3. Frazioni equivalenti e semplificazione</h2>
+    <p>Due frazioni sono <b>equivalenti</b> se valgono lo stesso numero, anche se scritte in modo diverso:</p>
+    <div class="formula">1/2 = 2/4 = 3/6 = 4/8</div>
+    <p>Si ottengono <b>moltiplicando</b> o <b>dividendo</b> numeratore e denominatore per lo stesso numero.</p>
+    <p><b>Semplificare</b> (ridurre ai minimi termini) = dividere numeratore e denominatore per il loro <b>MCD</b>.</p>
+    <div class="example"><b>6/8</b> → MCD(6,8) = 2 → divido entrambi per 2 → <b>3/4</b></div>
+    <div class="tip">🧩 Hai imparato l'MCD nel mattoncino 2: serve proprio qui! Una frazione è "ai minimi termini" quando numeratore e denominatore sono <b>primi tra loro</b>.</div>
+  </div>
+
+  <div class="card">
+    <h2>➕ 4. Addizione e sottrazione</h2>
+    <p><b>Stesso denominatore</b>: si sommano (o sottraggono) i numeratori, il denominatore resta uguale.</p>
+    <div class="example">2/5 + 1/5 = <b>3/5</b></div>
+    <p><b>Denominatori diversi</b>: prima si trova il <b>denominatore comune</b> (il <b>mcm</b> dei denominatori), si scrivono le frazioni equivalenti, poi si sommano i numeratori.</p>
+    <div class="example"><b>1/2 + 1/3</b> → mcm(2,3) = 6 → 3/6 + 2/6 = <b>5/6</b></div>
+    <div class="tip">🧠 Per sommare servono pezzi della <b>stessa misura</b>: ecco perché serve lo stesso denominatore (il mcm del mattoncino 2).</div>
+  </div>
+
+  <div class="card videobox">
+    <h2>🎬 Video — Addizione e sottrazione tra frazioni</h2>
+    <div class="video" data-id="esf4SlVQjo4" role="button" tabindex="0" aria-label="Riproduci il video su addizione e sottrazione tra frazioni" onclick="playVideo(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(this);}">
+      <img src="https://i.ytimg.com/vi/esf4SlVQjo4/hqdefault.jpg" alt="Anteprima: addizione e sottrazione tra frazioni" loading="lazy">
+      <span class="video-play"></span>
+    </div>
+    <p class="video-meta">📺 Schooltoon · <a href="https://www.youtube.com/watch?v=esf4SlVQjo4" target="_blank" rel="noopener">Apri su YouTube ↗</a></p>
+  </div>
+
+  <div class="card">
+    <h2>✖️ 5. Moltiplicazione e divisione</h2>
+    <p><b>Moltiplicazione</b>: numeratore per numeratore, denominatore per denominatore (qui <b>non</b> serve il denominatore comune!).</p>
+    <div class="example">2/3 × 4/5 = <b>8/15</b></div>
+    <p><b>Divisione</b>: si moltiplica la prima frazione per il <b>reciproco</b> della seconda (la seconda capovolta).</p>
+    <div class="example">2/3 : 4/5 = 2/3 × 5/4 = 10/12 = <b>5/6</b></div>
+    <div class="tip">🔄 Il <b>reciproco</b> è la frazione capovolta: il reciproco di 2/3 è 3/2; il reciproco di 5 è 1/5.</div>
+  </div>
+
+  <div class="card">
+    <h2>💯 6. Frazioni, decimali e percentuali</h2>
+    <p>Sono tre modi di dire la stessa cosa.</p>
+    <table>
+      <tr><th class="c">Frazione</th><th class="c">Decimale</th><th class="c">Percentuale</th></tr>
+      <tr><td class="c hl">1/2</td><td class="c">0,5</td><td class="c">50%</td></tr>
+      <tr><td class="c hl">1/4</td><td class="c">0,25</td><td class="c">25%</td></tr>
+      <tr><td class="c hl">3/4</td><td class="c">0,75</td><td class="c">75%</td></tr>
+      <tr><td class="c hl">1/10</td><td class="c">0,1</td><td class="c">10%</td></tr>
+    </table>
+    <p>Una <b>percentuale</b> è una frazione con denominatore <b>100</b>: 50% = 50/100 = 1/2.</p>
+    <div class="example"><b>Quanto è il 50% di 80?</b> → 80 × 50/100 = <b>40</b>. &nbsp; <b>3/4 di 100?</b> → <b>75</b>.</div>
+  </div>
+
+  <div class="card">
+    <h2>🗺️ Da tenere in mente</h2>
+    <pre class="ascii">  Frazione = una DIVISIONE in attesa:  3/4 = 3 : 4 = 0,75
+
+  + e −  →  serve lo STESSO denominatore (mcm)
+  ×      →  dritto per dritto (num×num, den×den)
+  ÷      →  × per il RECIPROCO (capovolgo la seconda)
+  %      →  frazione con denominatore 100</pre>
+  </div>
+
+  <div class="card">
+    <h2>✅ Esercizi (prova tu!)</h2>
+    <p style="margin-top:0;color:#8a7f70;">Rispondi qui sotto: tocca <b>Vero/Falso</b> o scrivi il numero (la virgola va bene, es. 0,5) e premi <b>Controlla</b>. 🙂</p>
+    <h3>Esercizio 1 — Vero o Falso</h3>
+    <div id="es1"></div>
+    <h3>Esercizio 2 — Frazione (o %) di un numero</h3>
+    <div id="es2"></div>
+    <h3>Esercizio 3 — Da frazione a decimale</h3>
+    <div id="es3"></div>
+    <h3>Esercizio 4 — Operazioni</h3>
+    <div id="es4"></div>
+  </div>
+
+  <div class="allena">
+    🏆 Quando sai fare gli esercizi senza guardare, sei pronta!<br>
+    <a href="frazioni-allenamento.html">🏋️ Allenati con l'app</a>
+  </div>
+
+  <footer>🔗 <a href="index.html">Indice</a> · prossimo → <i>Il calcolo letterale: i monomi</i></footer>
+</div>
+<script src="app.js"></script>
+<script>
+  esVF("es1", [
+    {t:"In una frazione, il numero sotto la linea è il denominatore.", a:true,  sol:"Esatto: dice in quante parti è diviso l'intero."},
+    {t:"La frazione 5/3 è una frazione propria.",                      a:false, sol:"È impropria: il numeratore è maggiore del denominatore."},
+    {t:"Per semplificare divido numeratore e denominatore per lo stesso numero.", a:true, sol:"Sì, di solito per il loro MCD."},
+    {t:"Per sommare 1/2 + 1/3 servono prima denominatori uguali.",     a:true,  sol:"Servono pezzi della stessa misura (mcm = 6)."},
+    {t:"1/2 è uguale a 0,5.",                                          a:true,  sol:"Sì: 1 : 2 = 0,5 = 50%."},
+  ]);
+  esFill("es2", [
+    {q:"1/2 di 10 = ?",   a:5,  sol:"Metà di 10 è 5."},
+    {q:"3/4 di 100 = ?",  a:75, sol:"100 × 3/4 = 75."},
+    {q:"10% di 200 = ?",  a:20, sol:"200 × 10/100 = 20."},
+    {q:"50% di 80 = ?",   a:40, sol:"Metà di 80 = 40."},
+    {q:"1/5 di 25 = ?",   a:5,  sol:"25 : 5 = 5."},
+  ]);
+  esFill("es3", [
+    {q:"1/2 = ? (decimale)",  a:0.5,  sol:"1 : 2 = 0,5."},
+    {q:"1/4 = ? (decimale)",  a:0.25, sol:"1 : 4 = 0,25."},
+    {q:"3/10 = ? (decimale)", a:0.3,  sol:"3 : 10 = 0,3."},
+    {q:"2/5 = ? (decimale)",  a:0.4,  sol:"2 : 5 = 0,4."},
+    {q:"1/10 = ? (decimale)", a:0.1,  sol:"1 : 10 = 0,1."},
+  ]);
+  esFill("es4", [
+    {q:"1/2 + 1/2 = ? (intero)",        a:1,    sol:"Due metà fanno un intero: 1."},
+    {q:"2/3 × 3 = ?",                   a:2,    sol:"2/3 × 3 = 6/3 = 2."},
+    {q:"Il reciproco di 1/4 = ? (intero)", a:4, sol:"Capovolgo 1/4 → 4/1 = 4."},
+    {q:"1/4 + 1/4 = ? (decimale)",      a:0.5,  sol:"2/4 = 1/2 = 0,5."},
+    {q:"3/3 = ?",                       a:1,    sol:"Frazione apparente: 3/3 = 1."},
+  ]);
+</script>
+<script src="lightbox.js"></script>
+<script>
+  if ('serviceWorker' in navigator) { navigator.serviceWorker.register('./service-worker.js'); }
+</script>
+</body>
+</html>
