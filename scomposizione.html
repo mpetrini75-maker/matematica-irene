@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matematica - La scomposizione in fattori</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#FAF6EE">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Matematica di Irene">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="backbtn" href="index.html">← Indice</a>
+  <h1>🧩 La scomposizione in fattori</h1>
+  <p class="sub">Da un polinomio a un prodotto: l'operazione al contrario</p>
+
+  <div class="allena">
+    🏋️ <b>Vuoi allenarti?</b><br>
+    <a href="scomposizione-allenamento.html">▶ Apri l'allenamento</a>
+  </div>
+
+  <div class="card">
+    <p>📌 <b>A cosa serve:</b> <b>scomporre</b> vuol dire trasformare un polinomio in una <b>moltiplicazione</b> di fattori più semplici. È l'operazione <b>inversa</b> dei prodotti notevoli del mattoncino precedente, e serve tantissimo per <b>semplificare le frazioni algebriche</b> e <b>risolvere le equazioni</b>.</p>
+  </div>
+
+  <div class="card">
+    <h2>🎧 Overview vocale</h2>
+    <p style="margin-top:0;color:#8a7f70;">Ascolta la spiegazione di questo mattoncino mentre studi o fai altro.</p>
+    <audio controls preload="none" style="width:100%;">
+      <source src="scomposizione-overview.mp3" type="audio/mpeg">
+      Il tuo browser non supporta l'audio.
+    </audio>
+    <h2 style="margin-top:18px;">🗺️ Infografica</h2>
+    <p style="margin-top:0;color:#8a7f70;">Tutti i metodi di scomposizione in un'unica immagine.</p>
+    <a href="scomposizione-infografica.png" data-audio="scomposizione-overview.mp3"
+       style="display:block;text-align:center;background:var(--green-soft);color:var(--green);
+       text-decoration:none;border:2px solid var(--green);border-radius:14px;
+       padding:16px;font-size:1.1rem;font-weight:bold;">
+      🗺️ Apri l'infografica →
+    </a>
+  </div>
+
+  <div class="card">
+    <h2>🔄 1. Cosa significa scomporre</h2>
+    <p>Moltiplicare e scomporre sono due strade opposte:</p>
+    <pre class="ascii">  (x + 2)(x + 3)  ──moltiplico──►  x² + 5x + 6
+       prodotto    ◄──scompongo──    polinomio</pre>
+    <div class="tip">💡 Perché è utile: un <b>prodotto</b> è uguale a zero quando uno dei fattori è zero. Per questo, per risolvere le equazioni, prima si <b>scompone</b>.</div>
+  </div>
+
+  <div class="card videobox">
+    <h2>🎬 Video — La scomposizione (raccoglimento)</h2>
+    <div class="video" data-id="tr_eDpPxJl4" role="button" tabindex="0" aria-label="Riproduci il video sulla scomposizione" onclick="playVideo(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(this);}">
+      <img src="https://i.ytimg.com/vi/tr_eDpPxJl4/hqdefault.jpg" alt="Anteprima: scomposizione di polinomi" loading="lazy">
+      <span class="video-play"></span>
+    </div>
+    <p class="video-meta">📺 Schooltoon · <a href="https://www.youtube.com/watch?v=tr_eDpPxJl4" target="_blank" rel="noopener">Apri su YouTube ↗</a></p>
+  </div>
+
+  <div class="card">
+    <h2>🤝 2. Raccoglimento a fattor comune</h2>
+    <p>Si mette in <b>evidenza</b> il fattore comune a tutti i termini (il numero comune + le lettere comuni con l'esponente più piccolo).</p>
+    <div class="example">6x² + 9x = <b>3x(2x + 3)</b> &nbsp;·&nbsp; 10x³ − 5x² = <b>5x²(2x − 1)</b> &nbsp;·&nbsp; ax + ay = <b>a(x + y)</b></div>
+    <div class="tip">✅ Per controllare: <b>rimoltiplica</b> e devi riottenere il polinomio di partenza.</div>
+    <h3>Raccoglimento parziale (a gruppi)</h3>
+    <p>Quando non c'è un fattore comune a tutti, si raccoglie <b>a gruppi</b>:</p>
+    <div class="example">ax + ay + bx + by = a(x + y) + b(x + y) = <b>(x + y)(a + b)</b></div>
+  </div>
+
+  <div class="card">
+    <h2>⭐ 3. Con i prodotti notevoli (al contrario)</h2>
+    <h3>Differenza di quadrati</h3>
+    <div class="formula">a² − b² = (a + b)(a − b)</div>
+    <div class="example">x² − 9 = <b>(x + 3)(x − 3)</b> &nbsp;·&nbsp; x² − 25 = <b>(x + 5)(x − 5)</b></div>
+    <h3>Quadrato di binomio</h3>
+    <div class="formula">a² + 2ab + b² = (a + b)²</div>
+    <div class="example">x² + 6x + 9 = <b>(x + 3)²</b> &nbsp;·&nbsp; x² − 10x + 25 = <b>(x − 5)²</b></div>
+    <div class="warn">⚠️ La <b>somma</b> di quadrati x² + 9 <b>NON</b> si scompone con questi metodi.</div>
+  </div>
+
+  <div class="card">
+    <h2>🎯 4. Trinomio speciale (somma e prodotto)</h2>
+    <p>Un trinomio del tipo <b>x² + sx + p</b> si scompone in <b>(x + a)(x + b)</b> cercando due numeri <b>a</b> e <b>b</b> tali che:</p>
+    <div class="formula">a + b = s &nbsp;&nbsp;e&nbsp;&nbsp; a · b = p</div>
+    <div class="example"><b>x² + 5x + 6</b> = (x + 2)(x + 3) &nbsp;<i>perché 2+3=5 e 2·3=6</i><br>
+      <b>x² + 7x + 12</b> = (x + 3)(x + 4) &nbsp;<i>perché 3+4=7 e 3·4=12</i></div>
+  </div>
+
+  <div class="card videobox">
+    <h2>🎬 Video — Il trinomio speciale</h2>
+    <div class="video" data-id="TtLH7Nje-Fw" role="button" tabindex="0" aria-label="Riproduci il video sul trinomio speciale" onclick="playVideo(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(this);}">
+      <img src="https://i.ytimg.com/vi/TtLH7Nje-Fw/hqdefault.jpg" alt="Anteprima: il trinomio speciale" loading="lazy">
+      <span class="video-play"></span>
+    </div>
+    <p class="video-meta">📺 Matematica Passo Passo · <a href="https://www.youtube.com/watch?v=TtLH7Nje-Fw" target="_blank" rel="noopener">Apri su YouTube ↗</a></p>
+  </div>
+
+  <div class="card">
+    <h2>🗺️ In che ordine provare</h2>
+    <pre class="ascii">  1) RACCOGLIMENTO a fattor comune (se c'è)
+  2) PRODOTTO NOTEVOLE? (differenza di quadrati / quadrato di binomio)
+  3) TRINOMIO x² + sx + p? → due numeri: somma s, prodotto p
+  ✅ verifica sempre RIMOLTIPLICANDO</pre>
+  </div>
+
+  <div class="card">
+    <h2>✅ Esercizi (prova tu!)</h2>
+    <p style="margin-top:0;color:#8a7f70;">Rispondi qui sotto: tocca <b>Vero/Falso</b> o scrivi il numero e premi <b>Controlla</b>. 🙂</p>
+    <h3>Esercizio 1 — Vero o Falso</h3>
+    <div id="es1"></div>
+    <h3>Esercizio 2 — Il fattore comune (numero)</h3>
+    <div id="es2"></div>
+    <h3>Esercizio 3 — Differenza di quadrati (completa)</h3>
+    <div id="es3"></div>
+    <h3>Esercizio 4 — Trinomio speciale (completa)</h3>
+    <div id="es4"></div>
+  </div>
+
+  <div class="allena">
+    🏆 Quando sai fare gli esercizi senza guardare, sei pronta!<br>
+    <a href="scomposizione-allenamento.html">🏋️ Allenati con l'app</a>
+  </div>
+
+  <footer>🔗 <a href="index.html">Indice</a> · prossimo → <i>Le frazioni algebriche</i></footer>
+</div>
+<script src="app.js"></script>
+<script>
+  esVF("es1", [
+    {t:"Scomporre significa scrivere un polinomio come prodotto di fattori.", a:true,  sol:"Esatto, è una moltiplicazione di fattori."},
+    {t:"Scomporre è l'operazione inversa della moltiplicazione.",            a:true,  sol:"Sì: dalla moltiplicazione si torna indietro."},
+    {t:"x² − 9 si scompone in (x + 3)(x − 3).",                              a:true,  sol:"È una differenza di quadrati."},
+    {t:"Anche x² + 9 si scompone in (x + 3)(x − 3).",                        a:false, sol:"No: la SOMMA di quadrati non si scompone così."},
+    {t:"Nel raccoglimento si mette in evidenza il fattore comune.",          a:true,  sol:"Sì, il numero e le lettere comuni."},
+  ]);
+  esFill("es2", [
+    {q:"6x + 9 → numero da raccogliere = ?",   a:3, sol:"MCD(6,9) = 3 → 3(2x + 3)."},
+    {q:"10x² + 5x → numero da raccogliere = ?", a:5, sol:"MCD(10,5) = 5 → 5x(2x + 1)."},
+    {q:"8x + 12 → numero da raccogliere = ?",   a:4, sol:"MCD(8,12) = 4 → 4(2x + 3)."},
+    {q:"4x³ + 2x² → numero da raccogliere = ?", a:2, sol:"MCD(4,2) = 2 → 2x²(2x + 1)."},
+    {q:"9x + 6 → numero da raccogliere = ?",    a:3, sol:"MCD(9,6) = 3 → 3(3x + 2)."},
+  ]);
+  esFill("es3", [
+    {q:"x² − 9 = (x + 3)(x − ?)",   a:3, sol:"9 = 3², quindi (x+3)(x−3)."},
+    {q:"x² − 25 = (x + 5)(x − ?)",  a:5, sol:"25 = 5²."},
+    {q:"x² − 16 = (x + ?)(x − 4)",  a:4, sol:"16 = 4²."},
+    {q:"x² − 1 = (x + 1)(x − ?)",   a:1, sol:"1 = 1²."},
+    {q:"x² − 49 = (x + 7)(x − ?)",  a:7, sol:"49 = 7²."},
+  ]);
+  esFill("es4", [
+    {q:"x² + 5x + 6 = (x + 2)(x + ?)",  a:3, sol:"2 + 3 = 5 e 2 · 3 = 6."},
+    {q:"x² + 7x + 12 = (x + 3)(x + ?)", a:4, sol:"3 + 4 = 7 e 3 · 4 = 12."},
+    {q:"x² + 5x + 4 = (x + 1)(x + ?)",  a:4, sol:"1 + 4 = 5 e 1 · 4 = 4."},
+    {q:"x² + 6x + 8 = (x + 2)(x + ?)",  a:4, sol:"2 + 4 = 6 e 2 · 4 = 8."},
+    {q:"x² + 4x + 3 = (x + 1)(x + ?)",  a:3, sol:"1 + 3 = 4 e 1 · 3 = 3."},
+  ]);
+</script>
+<script src="lightbox.js"></script>
+<script>
+  if ('serviceWorker' in navigator) { navigator.serviceWorker.register('./service-worker.js'); }
+</script>
+</body>
+</html>

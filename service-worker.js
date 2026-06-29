@@ -1,4 +1,4 @@
-const CACHE = 'matematica-irene-v7';
+const CACHE = 'matematica-irene-v8';
 
 const ASSETS = [
   './',
@@ -23,6 +23,10 @@ const ASSETS = [
   './polinomi-allenamento.html',
   './polinomi-overview.mp3',
   './polinomi-infografica.png',
+  './scomposizione.html',
+  './scomposizione-allenamento.html',
+  './scomposizione-overview.mp3',
+  './scomposizione-infografica.png',
   './style.css',
   './app.js',
   './alert.js',
