@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matematica - Il calcolo letterale: i monomi</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#FAF6EE">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Matematica di Irene">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="backbtn" href="index.html">← Indice</a>
+  <h1>🔤 Il calcolo letterale: i monomi</h1>
+  <p class="sub">Le lettere al posto dei numeri, e come si maneggiano</p>
+
+  <div class="allena">
+    🏋️ <b>Vuoi allenarti?</b><br>
+    <a href="monomi-allenamento.html">▶ Apri l'allenamento</a>
+  </div>
+
+  <div class="card">
+    <p>📌 <b>A cosa serve:</b> in matematica si usano le <b>lettere</b> al posto dei numeri per scrivere regole valide <b>sempre</b> (il "doppio di un numero" è <b>2x</b>, qualunque sia x). Il mattone di base del calcolo letterale è il <b>monomio</b>: qui impari a riconoscerlo e a fare le quattro operazioni. È la porta d'ingresso a polinomi, scomposizioni ed equazioni.</p>
+  </div>
+
+  <div class="card">
+    <h2>🎧 Overview vocale</h2>
+    <p style="margin-top:0;color:#8a7f70;">Ascolta la spiegazione di questo mattoncino mentre studi o fai altro.</p>
+    <audio controls preload="none" style="width:100%;">
+      <source src="monomi-overview.mp3" type="audio/mpeg">
+      Il tuo browser non supporta l'audio.
+    </audio>
+    <h2 style="margin-top:18px;">🗺️ Infografica</h2>
+    <p style="margin-top:0;color:#8a7f70;">Coefficiente, grado, simili e tutte le operazioni in un'immagine.</p>
+    <a href="monomi-infografica.png" data-audio="monomi-overview.mp3"
+       style="display:block;text-align:center;background:var(--green-soft);color:var(--green);
+       text-decoration:none;border:2px solid var(--green);border-radius:14px;
+       padding:16px;font-size:1.1rem;font-weight:bold;">
+      🗺️ Apri l'infografica →
+    </a>
+  </div>
+
+  <div class="card videobox">
+    <h2>🎬 Video — I monomi e il calcolo letterale</h2>
+    <div class="video" data-id="Le7ejHVogl8" role="button" tabindex="0" aria-label="Riproduci il video sui monomi" onclick="playVideo(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(this);}">
+      <img src="https://i.ytimg.com/vi/Le7ejHVogl8/hqdefault.jpg" alt="Anteprima: i monomi" loading="lazy">
+      <span class="video-play"></span>
+    </div>
+    <p class="video-meta">📺 Schooltoon · <a href="https://www.youtube.com/watch?v=Le7ejHVogl8" target="_blank" rel="noopener">Apri su YouTube ↗</a></p>
+  </div>
+
+  <div class="card">
+    <h2>🔤 1. Cos'è un monomio</h2>
+    <p>Un <b>monomio</b> è fatto solo di <b>moltiplicazioni</b> tra numeri e lettere (niente + o −, niente lettere al denominatore).</p>
+    <table>
+      <tr><th>È un monomio</th><th>NON è un monomio</th></tr>
+      <tr><td class="hl">5x · −3a²b · 7 · x³</td><td>x + 2 · 3/x</td></tr>
+    </table>
+    <p>In ogni monomio distinguiamo due parti:</p>
+    <div class="example"><b>5x²y</b> → <b>coefficiente</b> = 5 (la parte numerica) · <b>parte letterale</b> = x²y</div>
+  </div>
+
+  <div class="card">
+    <h2>📐 2. Il grado di un monomio</h2>
+    <p>Il <b>grado</b> è la <b>somma degli esponenti</b> delle lettere.</p>
+    <table>
+      <tr><th>Monomio</th><th class="c">Grado</th></tr>
+      <tr><td>3x²</td><td class="c hl">2</td></tr>
+      <tr><td>2x³y (3+1)</td><td class="c hl">4</td></tr>
+      <tr><td>7a⁴b² (4+2)</td><td class="c hl">6</td></tr>
+      <tr><td>7 (solo numero)</td><td class="c hl">0</td></tr>
+      <tr><td>x</td><td class="c hl">1</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>👯 3. Monomi simili</h2>
+    <p>Due monomi sono <b>simili</b> se hanno la <b>stessa parte letterale</b> (stesse lettere con stessi esponenti).</p>
+    <div class="example"><b>Simili:</b> 3x²y e −5x²y ✓ &nbsp;·&nbsp; <b>NON simili:</b> 2x² e 2x³ ✗</div>
+    <div class="tip">💡 Questa è la chiave per l'addizione: si possono sommare <b>solo monomi simili</b>.</div>
+  </div>
+
+  <div class="card">
+    <h2>➕ 4. Addizione e sottrazione</h2>
+    <p>Solo tra monomi <b>simili</b>: si sommano (o sottraggono) i <b>coefficienti</b>, la parte letterale resta uguale.</p>
+    <div class="example">3x + 5x = <b>8x</b> &nbsp;·&nbsp; 7x²y − 2x²y = <b>5x²y</b></div>
+    <div class="warn">⚠️ Se NON sono simili, la somma resta indicata: <b>2x + 3y</b> non si può "unire".</div>
+  </div>
+
+  <div class="card">
+    <h2>✖️ 5. Moltiplicazione, divisione e potenza</h2>
+    <p><b>Moltiplicazione</b>: coefficienti per coefficienti, e gli esponenti delle stesse lettere si <b>sommano</b>.</p>
+    <div class="example">2x³ · 3x² = <b>6x⁵</b> &nbsp;·&nbsp; (−2x)(4x) = <b>−8x²</b></div>
+    <p><b>Divisione</b>: coefficienti diviso coefficienti, esponenti si <b>sottraggono</b>.</p>
+    <div class="example">6x⁵ : 2x² = <b>3x³</b></div>
+    <p><b>Potenza</b>: si eleva il coefficiente e si <b>moltiplicano</b> gli esponenti.</p>
+    <div class="example">(2x²)³ = <b>8x⁶</b> &nbsp;·&nbsp; (−2x)² = <b>4x²</b> (il meno al quadrato → più)</div>
+  </div>
+
+  <div class="card videobox">
+    <h2>🎬 Video — Operazioni con i monomi</h2>
+    <div class="video" data-id="jAEWUBX1Fi4" role="button" tabindex="0" aria-label="Riproduci il video sulle operazioni con i monomi" onclick="playVideo(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(this);}">
+      <img src="https://i.ytimg.com/vi/jAEWUBX1Fi4/hqdefault.jpg" alt="Anteprima: operazioni con i monomi" loading="lazy">
+      <span class="video-play"></span>
+    </div>
+    <p class="video-meta">📺 Luigi Manca · <a href="https://www.youtube.com/watch?v=jAEWUBX1Fi4" target="_blank" rel="noopener">Apri su YouTube ↗</a></p>
+  </div>
+
+  <div class="card">
+    <h2>🔢 6. Il valore numerico</h2>
+    <p>Sostituendo alle lettere dei numeri si ottiene il <b>valore numerico</b> del monomio.</p>
+    <div class="example">Il valore di <b>3x</b> per x = 2 è 3 · 2 = <b>6</b> · il valore di <b>x²</b> per x = 3 è <b>9</b></div>
+  </div>
+
+  <div class="card">
+    <h2>🗺️ Le regole in breve</h2>
+    <pre class="ascii">  +  −   →  solo SIMILI · sommo i COEFFICIENTI
+  ×       →  coeff × coeff · esponenti SI SOMMANO
+  ÷       →  coeff : coeff · esponenti SI SOTTRAGGONO
+  potenza →  coeff elevato · esponenti SI MOLTIPLICANO
+  grado   →  somma degli esponenti delle lettere</pre>
+  </div>
+
+  <div class="card">
+    <h2>✅ Esercizi (prova tu!)</h2>
+    <p style="margin-top:0;color:#8a7f70;">Rispondi qui sotto: tocca <b>Vero/Falso</b> o scrivi il numero (i negativi col segno −) e premi <b>Controlla</b>. 🙂</p>
+    <h3>Esercizio 1 — Vero o Falso</h3>
+    <div id="es1"></div>
+    <h3>Esercizio 2 — Il grado del monomio</h3>
+    <div id="es2"></div>
+    <h3>Esercizio 3 — Il coefficiente del risultato</h3>
+    <div id="es3"></div>
+    <h3>Esercizio 4 — Valore numerico (sostituzione)</h3>
+    <div id="es4"></div>
+  </div>
+
+  <div class="allena">
+    🏆 Quando sai fare gli esercizi senza guardare, sei pronta!<br>
+    <a href="monomi-allenamento.html">🏋️ Allenati con l'app</a>
+  </div>
+
+  <footer>🔗 <a href="index.html">Indice</a> · prossimo → <i>I polinomi e i prodotti notevoli</i></footer>
+</div>
+<script src="app.js"></script>
+<script>
+  esVF("es1", [
+    {t:"In un monomio, il numero davanti alle lettere è il coefficiente.", a:true,  sol:"Sì: in 5x² il coefficiente è 5."},
+    {t:"5x² e 3x² sono monomi simili.",                                    a:true,  sol:"Hanno la stessa parte letterale (x²)."},
+    {t:"Si possono sommare 2x e 3y per ottenere 5xy.",                     a:false, sol:"No: non sono simili, restano 2x + 3y."},
+    {t:"Il grado di 4x³ è 3.",                                            a:true,  sol:"Il grado è l'esponente: 3."},
+    {t:"Per moltiplicare due monomi si sommano gli esponenti delle stesse lettere.", a:true, sol:"Esatto: es. 2x³·3x² = 6x⁵."},
+  ]);
+  esFill("es2", [
+    {q:"Grado di 5x³ = ?",    a:3, sol:"L'esponente di x è 3."},
+    {q:"Grado di 2x²y = ?",   a:3, sol:"2 + 1 = 3."},
+    {q:"Grado di 7a⁴b² = ?",  a:6, sol:"4 + 2 = 6."},
+    {q:"Grado di 9 (numero) = ?", a:0, sol:"Un numero da solo ha grado 0."},
+    {q:"Grado di x = ?",      a:1, sol:"x = x¹, grado 1."},
+  ]);
+  esFill("es3", [
+    {q:"2x³ · 3x² → coefficiente = ?",      a:6,  sol:"2 × 3 = 6 (il risultato è 6x⁵)."},
+    {q:"5x² + 3x² = ?x² → coefficiente = ?", a:8,  sol:"5 + 3 = 8 (8x²)."},
+    {q:"(−2x) · 4x → coefficiente = ?",     a:-8, sol:"−2 × 4 = −8 (−8x²)."},
+    {q:"6x⁵ : 2x² → coefficiente = ?",      a:3,  sol:"6 : 2 = 3 (3x³)."},
+    {q:"7a − 2a = ?a → coefficiente = ?",   a:5,  sol:"7 − 2 = 5 (5a)."},
+  ]);
+  esFill("es4", [
+    {q:"Quanto vale 3x se x = 2?",     a:6, sol:"3 × 2 = 6."},
+    {q:"Quanto vale x² se x = 3?",     a:9, sol:"3² = 9."},
+    {q:"Quanto vale 2x + 1 se x = 4?", a:9, sol:"2×4 + 1 = 9."},
+    {q:"Quanto vale 5x se x = 0?",     a:0, sol:"5 × 0 = 0."},
+    {q:"Quanto vale x³ se x = 2?",     a:8, sol:"2³ = 8."},
+  ]);
+</script>
+<script src="lightbox.js"></script>
+<script>
+  if ('serviceWorker' in navigator) { navigator.serviceWorker.register('./service-worker.js'); }
+</script>
+</body>
+</html>

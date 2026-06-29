@@ -1,4 +1,4 @@
-const CACHE = 'matematica-irene-v5';
+const CACHE = 'matematica-irene-v6';
 
 const ASSETS = [
   './',
@@ -15,6 +15,10 @@ const ASSETS = [
   './frazioni-allenamento.html',
   './frazioni-overview.mp3',
   './frazioni-infografica.png',
+  './monomi.html',
+  './monomi-allenamento.html',
+  './monomi-overview.mp3',
+  './monomi-infografica.png',
   './style.css',
   './app.js',
   './alert.js',
