@@ -1,4 +1,4 @@
-const CACHE = 'matematica-irene-v12';
+const CACHE = 'matematica-irene-v13';
 
 const ASSETS = [
   './',
@@ -43,6 +43,10 @@ const ASSETS = [
   './geometria-allenamento.html',
   './geometria-overview.mp3',
   './geometria-infografica.png',
+  './statistica.html',
+  './statistica-allenamento.html',
+  './statistica-overview.mp3',
+  './statistica-infografica.png',
   './style.css',
   './app.js',
   './alert.js',
