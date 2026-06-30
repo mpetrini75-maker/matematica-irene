@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matematica - Geometria: punti, rette, triangoli</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#FAF6EE">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Matematica di Irene">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="backbtn" href="index.html">← Indice</a>
+  <h1>📐 Geometria: punti, rette, triangoli</h1>
+  <p class="sub">Enti fondamentali, angoli e triangoli</p>
+
+  <div class="allena">
+    🏋️ <b>Vuoi allenarti?</b><br>
+    <a href="geometria-allenamento.html">▶ Apri l'allenamento</a>
+  </div>
+
+  <div class="card">
+    <p>📌 <b>A cosa serve:</b> la geometria studia le <b>figure</b> e lo <b>spazio</b>. Si parte dai "mattoni" (punto, retta, piano), si passa agli <b>angoli</b> e si arriva ai <b>triangoli</b>, la figura più importante di tutte. Qui impari i nomi, le proprietà e a fare i conti con i gradi.</p>
+  </div>
+
+  <div class="card">
+    <h2>🎧 Overview vocale</h2>
+    <p style="margin-top:0;color:#8a7f70;">Ascolta la spiegazione di questo mattoncino mentre studi o fai altro.</p>
+    <audio controls preload="none" style="width:100%;">
+      <source src="geometria-overview.mp3" type="audio/mpeg">
+      Il tuo browser non supporta l'audio.
+    </audio>
+    <h2 style="margin-top:18px;">🗺️ Infografica</h2>
+    <p style="margin-top:0;color:#8a7f70;">Enti, angoli e triangoli in un'unica immagine.</p>
+    <a href="geometria-infografica.png" data-audio="geometria-overview.mp3"
+       style="display:block;text-align:center;background:var(--green-soft);color:var(--green);
+       text-decoration:none;border:2px solid var(--green);border-radius:14px;
+       padding:16px;font-size:1.1rem;font-weight:bold;">
+      🗺️ Apri l'infografica →
+    </a>
+  </div>
+
+  <div class="card">
+    <h2>📍 1. Gli enti fondamentali</h2>
+    <p>La geometria parte da tre enti "primitivi" che si capiscono senza definirli:</p>
+    <table>
+      <tr><th>Ente</th><th>Com'è</th></tr>
+      <tr><td><b>Punto</b></td><td>non ha dimensioni: è solo una posizione</td></tr>
+      <tr><td><b>Retta</b></td><td>infinita nei due versi, senza inizio né fine</td></tr>
+      <tr><td><b>Piano</b></td><td>una superficie piatta infinita</td></tr>
+    </table>
+    <p>Da questi nascono la <b>semiretta</b> (ha un punto d'inizio ma non una fine) e il <b>segmento</b> (la parte di retta tra due punti, con una lunghezza misurabile).</p>
+  </div>
+
+  <div class="card">
+    <h2>🛣️ 2. Le posizioni tra due rette</h2>
+    <table>
+      <tr><th>Rette</th><th>Come stanno</th></tr>
+      <tr><td><b>Incidenti</b></td><td>si incontrano in un punto</td></tr>
+      <tr><td><b>Perpendicolari</b></td><td>si incontrano formando angoli di <b>90°</b></td></tr>
+      <tr><td><b>Parallele</b></td><td>non si incontrano mai (stessa distanza)</td></tr>
+    </table>
+  </div>
+
+  <div class="card videobox">
+    <h2>🎬 Video — Gli angoli</h2>
+    <div class="video" data-id="VKZWtcAFI8E" role="button" tabindex="0" aria-label="Riproduci il video sugli angoli" onclick="playVideo(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(this);}">
+      <img src="https://i.ytimg.com/vi/VKZWtcAFI8E/hqdefault.jpg" alt="Anteprima: gli angoli" loading="lazy">
+      <span class="video-play"></span>
+    </div>
+    <p class="video-meta">📺 HUB Scuola · <a href="https://www.youtube.com/watch?v=VKZWtcAFI8E" target="_blank" rel="noopener">Apri su YouTube ↗</a></p>
+  </div>
+
+  <div class="card">
+    <h2>📐 3. Gli angoli</h2>
+    <p>Un <b>angolo</b> è la parte di piano tra due semirette che partono dallo stesso punto (il <b>vertice</b>). Si misura in <b>gradi (°)</b>.</p>
+    <table>
+      <tr><th>Tipo</th><th class="c">Misura</th></tr>
+      <tr><td><b>Acuto</b></td><td class="c hl">minore di 90°</td></tr>
+      <tr><td><b>Retto</b></td><td class="c hl">90°</td></tr>
+      <tr><td><b>Ottuso</b></td><td class="c hl">tra 90° e 180°</td></tr>
+      <tr><td><b>Piatto</b></td><td class="c hl">180°</td></tr>
+      <tr><td><b>Giro</b></td><td class="c hl">360°</td></tr>
+    </table>
+    <h3>Coppie di angoli</h3>
+    <ul>
+      <li><b>Complementari:</b> la loro somma è <b>90°</b> (es. 30° e 60°).</li>
+      <li><b>Supplementari:</b> la loro somma è <b>180°</b> (es. 110° e 70°).</li>
+      <li><b>Opposti al vertice:</b> si formano quando due rette si incrociano e sono <b>uguali</b> tra loro.</li>
+    </ul>
+    <div class="tip">🧠 <b>Com</b>plementari → <b>90</b> (come l'angolo retto). <b>Sup</b>plementari → <b>180</b> (come l'angolo piatto).</div>
+  </div>
+
+  <div class="card">
+    <h2>🔺 4. I triangoli</h2>
+    <p>Un <b>triangolo</b> ha 3 lati, 3 vertici e 3 angoli. Proprietà d'oro:</p>
+    <div class="formula">somma degli angoli interni = 180°</div>
+    <p>Quindi, se conosci due angoli, il terzo è <b>180° − (la loro somma)</b>.</p>
+    <h3>Classificazione per i LATI</h3>
+    <table>
+      <tr><td><b>Equilatero</b></td><td>3 lati uguali (3 angoli di 60°)</td></tr>
+      <tr><td><b>Isoscele</b></td><td>2 lati uguali (2 angoli uguali)</td></tr>
+      <tr><td><b>Scaleno</b></td><td>3 lati tutti diversi</td></tr>
+    </table>
+    <h3>Classificazione per gli ANGOLI</h3>
+    <table>
+      <tr><td><b>Acutangolo</b></td><td>tutti gli angoli acuti</td></tr>
+      <tr><td><b>Rettangolo</b></td><td>un angolo di 90° (gli altri due sommano 90°)</td></tr>
+      <tr><td><b>Ottusangolo</b></td><td>un angolo ottuso</td></tr>
+    </table>
+    <div class="warn">⚠️ Un triangolo <b>non</b> può avere due angoli di 90°: la somma supererebbe già 180°!</div>
+  </div>
+
+  <div class="card videobox">
+    <h2>🎬 Video — I triangoli</h2>
+    <div class="video" data-id="eLW6bhenUgM" role="button" tabindex="0" aria-label="Riproduci il video sui triangoli" onclick="playVideo(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(this);}">
+      <img src="https://i.ytimg.com/vi/eLW6bhenUgM/hqdefault.jpg" alt="Anteprima: i triangoli" loading="lazy">
+      <span class="video-play"></span>
+    </div>
+    <p class="video-meta">📺 Mateamica · <a href="https://www.youtube.com/watch?v=eLW6bhenUgM" target="_blank" rel="noopener">Apri su YouTube ↗</a></p>
+  </div>
+
+  <div class="card">
+    <h2>🗺️ Da ricordare</h2>
+    <pre class="ascii">  Enti: punto · retta · piano → semiretta · segmento
+  Angoli: acuto<90 · retto=90 · ottuso · piatto=180 · giro=360
+          complementari=90°   supplementari=180°
+  Triangolo: angoli interni = 180°
+     lati: equilatero/isoscele/scaleno
+     angoli: acutangolo/rettangolo/ottusangolo</pre>
+  </div>
+
+  <div class="card">
+    <h2>✅ Esercizi (prova tu!)</h2>
+    <p style="margin-top:0;color:#8a7f70;">Rispondi qui sotto: tocca <b>Vero/Falso</b> o scrivi i gradi (solo il numero) e premi <b>Controlla</b>. 🙂</p>
+    <h3>Esercizio 1 — Vero o Falso</h3>
+    <div id="es1"></div>
+    <h3>Esercizio 2 — Complementari e supplementari</h3>
+    <div id="es2"></div>
+    <h3>Esercizio 3 — Il terzo angolo del triangolo</h3>
+    <div id="es3"></div>
+    <h3>Esercizio 4 — Quanti gradi?</h3>
+    <div id="es4"></div>
+  </div>
+
+  <div class="allena">
+    🏆 Quando sai fare gli esercizi senza guardare, sei pronta!<br>
+    <a href="geometria-allenamento.html">🏋️ Allenati con l'app</a>
+  </div>
+
+  <footer>🔗 <a href="index.html">Indice</a> · prossimo → <i>Statistica</i></footer>
+</div>
+<script src="app.js"></script>
+<script>
+  esVF("es1", [
+    {t:"Il punto, la retta e il piano sono gli enti fondamentali della geometria.", a:true,  sol:"Sì: sono i tre enti primitivi."},
+    {t:"Due rette parallele non si incontrano mai.",                                a:true,  sol:"Esatto: mantengono la stessa distanza."},
+    {t:"Un angolo retto misura 90°.",                                              a:true,  sol:"Sì, è l'angolo della 'squadra'."},
+    {t:"Due angoli complementari hanno per somma 180°.",                           a:false, sol:"No: i complementari sommano 90°. I supplementari 180°."},
+    {t:"La somma degli angoli interni di un triangolo è 180°.",                    a:true,  sol:"È la proprietà d'oro dei triangoli."},
+  ]);
+  esFill("es2", [
+    {q:"Il complementare di 30° = ? gradi", a:60, sol:"90 − 30 = 60."},
+    {q:"Il complementare di 45° = ?",       a:45, sol:"90 − 45 = 45."},
+    {q:"Il supplementare di 110° = ?",      a:70, sol:"180 − 110 = 70."},
+    {q:"Il supplementare di 90° = ?",       a:90, sol:"180 − 90 = 90."},
+    {q:"Il complementare di 20° = ?",       a:70, sol:"90 − 20 = 70."},
+  ]);
+  esFill("es3", [
+    {q:"Due angoli sono 50° e 60°: il terzo = ?", a:70, sol:"180 − (50+60) = 70."},
+    {q:"Due angoli sono 90° e 45°: il terzo = ?", a:45, sol:"180 − 135 = 45."},
+    {q:"Due angoli sono 70° e 70°: il terzo = ?", a:40, sol:"180 − 140 = 40."},
+    {q:"Triangolo equilatero: ogni angolo = ?",   a:60, sol:"180 : 3 = 60."},
+    {q:"Due angoli sono 100° e 30°: il terzo = ?", a:50, sol:"180 − 130 = 50."},
+  ]);
+  esFill("es4", [
+    {q:"Un angolo retto misura ? gradi",                a:90, sol:"90°."},
+    {q:"Un angolo piatto misura ? gradi",               a:180, sol:"180°."},
+    {q:"Un angolo giro misura ? gradi",                 a:360, sol:"360°."},
+    {q:"Somma degli angoli interni di un triangolo = ?", a:180, sol:"Sempre 180°."},
+    {q:"Quanti lati ha un triangolo?",                  a:3, sol:"3 lati (e 3 angoli)."},
+  ]);
+</script>
+<script src="lightbox.js"></script>
+<script>
+  if ('serviceWorker' in navigator) { navigator.serviceWorker.register('./service-worker.js'); }
+</script>
+</body>
+</html>
