@@ -2,11 +2,13 @@
    alert.js — Avvisi email al genitore (cervello unico, condiviso da tutte
    le pagine di "Matematica di Irene").
 
-   Due eventi per gli esercizi:
-     • inizio-allenamento  → Irene apre una pagina "-allenamento"
+   Tre eventi automatici:
+     • inizio-lezione      → Irene apre la pagina di un mattoncino (lezione)
+     • inizio-allenamento  → apre una pagina "-allenamento"
      • fine-allenamento    → completa la Sfida (livello 4) di TUTTE le sezioni
 
-   L'invio "inizio" parte da solo al caricamento della pagina di allenamento.
+   L'invio "inizio" parte da solo al caricamento della pagina (capisce dal
+   nome del file se è lezione o allenamento).
    Il "fine" viene segnalato dal codice della pagina chiamando
    segnaSezioneAllenamento(idSezione) ogni volta che la Sfida di una sezione
    è superata: quando tutte le sezioni sono complete parte la mail "fine".
@@ -80,9 +82,10 @@
     }
   };
 
-  // Invio automatico dell'evento "inizio" all'apertura della pagina di allenamento
+  // Invio automatico dell'evento "inizio" all'apertura della pagina
+  // (capisce dal nome del file se è lezione o allenamento)
   function avvio() {
-    if (isAllenamento) inviaAlert("inizio-allenamento");
+    inviaAlert(isAllenamento ? "inizio-allenamento" : "inizio-lezione");
   }
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", avvio);

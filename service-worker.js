@@ -1,4 +1,4 @@
-const CACHE = 'matematica-irene-v13';
+const CACHE = 'matematica-irene-v14';
 
 const ASSETS = [
   './',
