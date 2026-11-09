@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matematica - Il piano per la verifica di martedì 18 novembre</title>
+<link rel="manifest" href="manifest.json">
+<script src="alert.js"></script>
+<meta name="theme-color" content="#FAF6EE">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Matematica di Irene">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .giorno{border-left:6px solid var(--accent);}
+  .quando{display:inline-block;background:var(--accent);color:#fff;border-radius:99px;
+    padding:2px 12px;font-weight:bold;font-size:0.92rem;margin-bottom:6px;}
+  .tempo-badge{display:inline-block;background:var(--giallo-soft);border-radius:99px;
+    padding:2px 12px;font-size:0.92rem;margin-left:6px;}
+  .vai{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
+    border-radius:12px;padding:10px 16px;font-weight:bold;margin:4px 6px 4px 0;}
+  .vai.chiaro{background:var(--accent-soft);color:var(--accent);}
+  .fatto{display:flex;align-items:center;gap:10px;margin-top:12px;font-weight:bold;
+    color:var(--accent);cursor:pointer;font-size:1.05rem;}
+  .fatto input{width:26px;height:26px;accent-color:var(--accent);cursor:pointer;}
+  .card.done{opacity:0.6;}
+  .barra{background:var(--accent-soft);border-radius:99px;height:16px;overflow:hidden;margin:10px 0 4px;}
+  .barra div{background:var(--accent);height:100%;width:0;transition:width .3s ease;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="backbtn" href="index.html">← Indice</a>
+  <h1>🎯 Il piano per la verifica di matematica</h1>
+  <p class="sub">Verifica scritta di martedì 18 novembre · un mattoncino al giorno</p>
+
+  <div class="card">
+    <h2>📌 Come funziona</h2>
+    <p>Hai <b>6 giorni</b>, da martedì 10 a lunedì 16. Ogni giorno <b>un solo pezzo</b>, mezz'ora e basta. La domenica è libera.</p>
+    <p>Si sale una scala: ogni gradino regge quello dopo. 🧱</p>
+    <div class="tip">🎨 <b>Il metodo è sempre lo stesso:</b> ascolta o leggi la spiegazione, guarda la mappa, <b>dilla a voce</b>, poi fai 3 o 4 esercizi. Se sbagli, guardi la soluzione: è così che si impara.</div>
+    <div class="barra"><div id="barra"></div></div>
+    <p id="conta" style="text-align:center;font-weight:bold;color:var(--accent)">0 giorni su 6</p>
+  </div>
+
+  <div class="card">
+    <h2>📋 Cosa chiede la prof</h2>
+    <p>La prof Leonarda ha scritto sul registro: <b>equazioni intere e fratte, frazioni algebriche, problemi con le frazioni e con le equazioni fratte</b>.</p>
+    <div class="tip">📄 Papà ha scaricato da Classroom le <b>schede di esercizi</b> con il risultato accanto: stampatele. Quando le usi, <b>copri</b> la colonna dei risultati e scoprila solo per controllare.</div>
+  </div>
+
+  <div class="card giorno" id="g1">
+    <span class="quando">Martedì 10 novembre · 16:00</span><span class="tempo-badge">⏱️ 30 minuti</span>
+    <h2>🔄 Giorno 1: la scomposizione</h2>
+    <p>È il gradino più importante: senza scomporre non trovi né le condizioni di esistenza né il mcm.</p>
+    <ol>
+      <li>Apri il mattoncino e ripeti a voce <b>"In che ordine provare"</b>.</li>
+      <li>Sulla scheda <b>"Scomposizione di polinomi"</b>: esercizi <b>1, 2, 3, 4, 5</b> (raccoglimento).</li>
+      <li>Sulla scheda <b>"M.C.D. e m.c.m. tra polinomi"</b>: esercizi <b>1, 2, 3</b>.</li>
+    </ol>
+    <a class="vai" href="scomposizione.html">▶ La scomposizione</a>
+    <a class="vai chiaro" href="scomposizione-allenamento.html">🏋️ Allenamento</a>
+    <label class="fatto"><input type="checkbox" data-giorno="g1"> Fatto!</label>
+  </div>
+
+  <div class="card giorno" id="g2">
+    <span class="quando">Mercoledì 11 novembre · 16:00</span><span class="tempo-badge">⏱️ 30 minuti</span>
+    <h2>➗ Giorno 2: le frazioni algebriche</h2>
+    <p><b>Prima, 3 minuti di ricordo:</b> senza guardare, di' a voce come si scompone x² − 9. Poi controlla.</p>
+    <ol>
+      <li>Ascolta l'overview e guarda l'infografica.</li>
+      <li>Ripeti a voce: <b>condizioni di esistenza</b>, <b>semplificare</b>, <b>sommare con il mcm</b>.</li>
+      <li>Sulla scheda <b>"Frazioni algebriche"</b>: esercizi <b>8, 9, 10</b> (i valori vietati).</li>
+    </ol>
+    <a class="vai" href="frazioni-algebriche.html">▶ Le frazioni algebriche</a>
+    <a class="vai chiaro" href="frazioni-algebriche-allenamento.html">🏋️ Allenamento</a>
+    <label class="fatto"><input type="checkbox" data-giorno="g2"> Fatto!</label>
+  </div>
+
+  <div class="card giorno" id="g3">
+    <span class="quando">Giovedì 12 novembre · 16:00</span><span class="tempo-badge">⏱️ 30 minuti</span>
+    <h2>⚖️ Giorno 3: le equazioni intere</h2>
+    <p><b>Prima, 3 minuti di ricordo:</b> quando una frazione algebrica "non esiste"? Dillo a voce.</p>
+    <ol>
+      <li>Ripassa <b>i due principi</b> e <b>i passi</b> per risolvere.</li>
+      <li>Ripeti a voce i <b>tre tipi</b>: determinata, impossibile, indeterminata.</li>
+      <li>Fai gli esercizi in fondo al mattoncino.</li>
+    </ol>
+    <a class="vai" href="equazioni.html">▶ Le equazioni di 1° grado</a>
+    <a class="vai chiaro" href="equazioni-allenamento.html">🏋️ Allenamento</a>
+    <label class="fatto"><input type="checkbox" data-giorno="g3"> Fatto!</label>
+  </div>
+
+  <div class="card giorno" id="g4">
+    <span class="quando">Venerdì 13 novembre · 16:00</span><span class="tempo-badge">⏱️ 35 minuti</span>
+    <h2>💧 Giorno 4: le equazioni fratte</h2>
+    <p>Oggi il cuore della verifica: <b>5 passi</b>, sempre gli stessi.</p>
+    <ol>
+      <li>Leggi i 5 passi e ripetili a voce: <b>scompongo · vieto · tolgo i denominatori · risolvo · controllo</b>.</li>
+      <li>Segui i 4 esempi, con calma.</li>
+      <li>Sulla scheda <b>"Equazioni di primo grado numeriche frazionarie"</b>: esercizi <b>2, 3, 6, 13, 14</b>, poi la <b>1</b> (è una trappola!).</li>
+    </ol>
+    <a class="vai" href="equazioni-fratte.html">▶ Le equazioni fratte</a>
+    <label class="fatto"><input type="checkbox" data-giorno="g4"> Fatto!</label>
+  </div>
+
+  <div class="card giorno" id="g5">
+    <span class="quando">Sabato 14 novembre · 16:00</span><span class="tempo-badge">⏱️ 30 minuti</span>
+    <h2>🧩 Giorno 5: i problemi</h2>
+    <p><b>Prima, 3 minuti di ricordo:</b> di' a voce i 5 passi delle equazioni fratte.</p>
+    <ol>
+      <li>Impara il <b>vocabolario</b>: doppio, metà, consecutivo, reciproco.</li>
+      <li>Segui i 4 esempi: prima <b>di' a voce</b> l'equazione, poi guarda.</li>
+      <li>Fai gli esercizi in fondo.</li>
+    </ol>
+    <a class="vai" href="problemi-equazioni.html">▶ I problemi con le equazioni</a>
+    <label class="fatto"><input type="checkbox" data-giorno="g5"> Fatto!</label>
+  </div>
+
+  <div class="card giorno" id="g6">
+    <span class="quando">Lunedì 16 novembre · 16:00</span><span class="tempo-badge">⏱️ 20 minuti</span>
+    <h2>☀️ Giorno 6: ripasso leggero</h2>
+    <p>Domani c'è anche la verifica di biologia: oggi per matematica bastano <b>20 minuti</b>.</p>
+    <ol>
+      <li>Ripeti a voce le due mappe <b>"Da tenere in mente"</b>: equazioni fratte e problemi.</li>
+      <li>Rifai <b>un solo</b> esempio delle fratte senza guardare, poi controlla.</li>
+    </ol>
+    <a class="vai" href="equazioni-fratte.html">▶ Equazioni fratte</a>
+    <a class="vai chiaro" href="problemi-equazioni.html">🧩 Problemi</a>
+    <label class="fatto"><input type="checkbox" data-giorno="g6"> Fatto!</label>
+  </div>
+
+  <div class="card">
+    <h2>☀️ Martedì mattina, prima della verifica</h2>
+    <p>Solo <b>10 minuti</b>: riguarda la mappa dei 5 passi. Niente di nuovo.</p>
+    <p>In verifica ricordati il passo 5: <b>la soluzione è vietata?</b> Hai fatto la tua parte ogni giorno. Respira e parti dagli esercizi più facili. 💪</p>
+  </div>
+
+  <footer>🔗 <a href="index.html">Indice</a> · Fatto con cura per Irene 🌿</footer>
+</div><script src="app.js"></script>
+<script>
+  (function(){
+    var CHIAVE = "piano-matematica-18-novembre-fatti";
+    var fatti = {};
+    try { fatti = JSON.parse(localStorage.getItem(CHIAVE) || "{}"); } catch(e) { fatti = {}; }
+    var caselle = document.querySelectorAll("input[data-giorno]");
+    function aggiorna(){
+      var n = 0;
+      caselle.forEach(function(c){
+        var card = document.getElementById(c.dataset.giorno);
+        if(c.checked){ n++; card.classList.add("done"); } else { card.classList.remove("done"); }
+      });
+      document.getElementById("barra").style.width = (n / caselle.length * 100) + "%";
+      document.getElementById("conta").textContent = n === caselle.length
+        ? "🎉 6 giorni su 6: sei pronta!"
+        : n + (n === 1 ? " giorno" : " giorni") + " su " + caselle.length;
+    }
+    caselle.forEach(function(c){
+      c.checked = !!fatti[c.dataset.giorno];
+      c.addEventListener("change", function(){
+        fatti[c.dataset.giorno] = c.checked;
+        try { localStorage.setItem(CHIAVE, JSON.stringify(fatti)); } catch(e) {}
+        aggiorna();
+      });
+    });
+    aggiorna();
+  })();
+  if ('serviceWorker' in navigator) { navigator.serviceWorker.register('./service-worker.js'); }
+</script>
+</body>
+</html>

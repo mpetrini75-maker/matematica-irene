@@ -1,8 +1,11 @@
-const CACHE = 'matematica-irene-v14';
+const CACHE = 'matematica-irene-v15';
 
 const ASSETS = [
   './',
   './index.html',
+  './piano-matematica.html',
+  './equazioni-fratte.html',
+  './problemi-equazioni.html',
   './insiemi-numerici.html',
   './insiemi-numerici-allenamento.html',
   './insiemi-numerici-overview.mp3',

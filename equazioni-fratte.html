@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matematica - Le equazioni fratte</title>
+<link rel="manifest" href="manifest.json">
+<script src="alert.js"></script>
+<meta name="theme-color" content="#FAF6EE">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Matematica di Irene">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .passo{display:flex;gap:12px;align-items:flex-start;margin:10px 0;}
+  .passo .n{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:bold;}
+  .riga{font-family:inherit;margin:4px 0;}
+  .ok{color:#2f6b45;font-weight:bold;}
+  .no{color:#8f3320;font-weight:bold;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="backbtn" href="index.html">← Indice</a>
+  <h1>💧 Le equazioni fratte</h1>
+  <p class="sub">Equazioni con la x al denominatore: 5 passi, sempre gli stessi</p>
+
+  <div class="card">
+    <p>📌 <b>A cosa serve:</b> è il cuore della verifica. Un'equazione è <b>fratta</b> quando la <b>x sta sotto la linea di frazione</b>. Si risolve come quelle che conosci già, con <b>due passi in più</b>: all'inizio le condizioni di esistenza, alla fine il controllo.</p>
+    <div class="tip">🧱 Usi tre mattoncini che hai già: la <a href="scomposizione.html">scomposizione</a>, le <a href="frazioni-algebriche.html">frazioni algebriche</a> e le <a href="equazioni.html">equazioni di 1° grado</a>.</div>
+  </div>
+
+  <div class="card">
+    <h2>🔎 1. Intera o fratta?</h2>
+    <p>Guarda <b>dove sta la x</b>.</p>
+    <div class="example"><b>x/3 + 1 = 5</b> → la x è sopra: è <b>intera</b> (il 3 è solo un numero)<br>
+    <b>3/x + 1 = 5</b> → la x è sotto: è <b>fratta</b></div>
+  </div>
+
+  <div class="card">
+    <h2>🪜 2. I 5 passi</h2>
+    <div class="passo"><span class="n">1</span><div><b>Scomponi</b> i denominatori (se si può).</div></div>
+    <div class="passo"><span class="n">2</span><div><b>Condizioni di esistenza (C.E.)</b>: ogni denominatore <b>≠ 0</b>. Scrivi i valori vietati.</div></div>
+    <div class="passo"><span class="n">3</span><div>Trova il <b>mcm</b> dei denominatori e <b>moltiplica tutto</b> per il mcm: i denominatori spariscono.</div></div>
+    <div class="passo"><span class="n">4</span><div>Risolvi l'equazione <b>intera</b> che resta, come sai già.</div></div>
+    <div class="passo"><span class="n">5</span><div><b>Controlla</b>: la soluzione è fra i valori vietati? Se <b>no</b> → <span class="ok">accettabile</span>. Se <b>sì</b> → <span class="no">non accettabile</span>, e l'equazione è <b>impossibile</b>.</div></div>
+    <div class="tip">🗣️ Ripeti a voce: <b>scompongo · vieto · tolgo i denominatori · risolvo · controllo</b>.</div>
+  </div>
+
+  <div class="card">
+    <h2>✏️ 3. Esempio facile</h2>
+    <div class="example">
+      <p class="riga"><b>8/x + 1 = 5</b></p>
+      <p class="riga">② C.E.: <b>x ≠ 0</b></p>
+      <p class="riga">③ mcm = x → moltiplico tutto per x: <b>8 + x = 5x</b></p>
+      <p class="riga">④ 8 = 5x − x → 8 = 4x → <b>x = 2</b></p>
+      <p class="riga">⑤ 2 non è 0 → <span class="ok">accettabile</span> ✅</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>✏️ 4. Due frazioni uguali</h2>
+    <div class="example">
+      <p class="riga"><b>2/(x + 1) = 1/(x − 2)</b></p>
+      <p class="riga">② C.E.: x + 1 ≠ 0 → <b>x ≠ −1</b> · x − 2 ≠ 0 → <b>x ≠ 2</b></p>
+      <p class="riga">③ mcm = (x + 1)(x − 2) → <b>2(x − 2) = 1(x + 1)</b></p>
+      <p class="riga">④ 2x − 4 = x + 1 → <b>x = 5</b></p>
+      <p class="riga">⑤ 5 non è né −1 né 2 → <span class="ok">accettabile</span> ✅</p>
+    </div>
+    <div class="tip">💡 Con <b>una frazione per parte</b> puoi fare il "prodotto in croce": sopra di sinistra × sotto di destra = sopra di destra × sotto di sinistra.</div>
+  </div>
+
+  <div class="card">
+    <h2>🧩 5. Quando serve scomporre</h2>
+    <div class="example">
+      <p class="riga"><b>3/(x − 1) − 2/(x + 1) = 10/(x² − 1)</b></p>
+      <p class="riga">① x² − 1 = <b>(x − 1)(x + 1)</b> (differenza di quadrati)</p>
+      <p class="riga">② C.E.: <b>x ≠ 1</b> e <b>x ≠ −1</b></p>
+      <p class="riga">③ mcm = (x − 1)(x + 1) → <b>3(x + 1) − 2(x − 1) = 10</b></p>
+      <p class="riga">④ 3x + 3 − 2x + 2 = 10 → x + 5 = 10 → <b>x = 5</b></p>
+      <p class="riga">⑤ 5 non è vietato → <span class="ok">accettabile</span> ✅</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>⚠️ 6. La trappola: la soluzione vietata</h2>
+    <div class="example">
+      <p class="riga"><b>x/(x − 3) = 3/(x − 3) + 2</b></p>
+      <p class="riga">② C.E.: <b>x ≠ 3</b></p>
+      <p class="riga">③ moltiplico per (x − 3): <b>x = 3 + 2(x − 3)</b></p>
+      <p class="riga">④ x = 3 + 2x − 6 → x = 2x − 3 → <b>x = 3</b></p>
+      <p class="riga">⑤ ma 3 è <b>vietato</b>! → <span class="no">non accettabile</span> → l'equazione è <b>impossibile</b></p>
+    </div>
+    <div class="warn">⚠️ <b>Errore tipico:</b> trovare x = 3 e scriverla come risultato. Il passo 5 serve proprio a questo: in verifica la prof lo controlla sempre.</div>
+  </div>
+
+  <div class="card">
+    <h2>🗺️ Da tenere in mente</h2>
+    <pre class="ascii">  x SOTTO la linea → FRATTA
+  1 scomponi i denominatori
+  2 C.E.: ogni denominatore ≠ 0
+  3 moltiplica tutto per il mcm
+  4 risolvi l'equazione intera
+  5 controlla: è vietata?
+      no → accettabile
+      sì → impossibile</pre>
+  </div>
+
+  <div class="card">
+    <h2>✅ Esercizi (prova tu!)</h2>
+    <p style="margin-top:0;color:#8a7f70;">Tocca <b>Vero/Falso</b> o scrivi il numero e premi <b>Controlla</b>. Se sbagli, guarda la soluzione: va benissimo. 🙂</p>
+    <h3>Esercizio 1 — Vero o Falso</h3>
+    <div id="es1"></div>
+    <h3>Esercizio 2 — Il valore vietato</h3>
+    <div id="es2"></div>
+    <h3>Esercizio 3 — Risolvi (la soluzione è sempre accettabile)</h3>
+    <div id="es3"></div>
+  </div>
+
+  <div class="card">
+    <h2>📄 Sulla scheda stampata</h2>
+    <p>Nella scheda <b>"Equazioni di primo grado numeriche frazionarie"</b> che ha scaricato papà, il risultato è scritto accanto: copri la colonna di destra, risolvi, poi scopri e controlla.</p>
+    <p>Comincia da queste: <b>2, 3, 6, 13, 14</b>. Poi la <b>1</b>, che è una trappola.</p>
+  </div>
+
+  <footer>🔗 <a href="index.html">Indice</a> · prossimo → <a href="problemi-equazioni.html">I problemi con le equazioni</a></footer>
+</div>
+<script src="app.js"></script>
+<script>
+  esVF("es1", [
+    {t:"3/x + 1 = 5 è un'equazione fratta.",                         a:true,  sol:"Sì: la x sta al denominatore."},
+    {t:"x/3 + 1 = 5 è un'equazione fratta.",                         a:false, sol:"No: la x è sopra, il 3 è solo un numero. È intera."},
+    {t:"Le condizioni di esistenza si scrivono alla fine.",          a:false, sol:"No: si scrivono all'inizio, prima di togliere i denominatori."},
+    {t:"Se la soluzione è un valore vietato, l'equazione è impossibile.", a:true, sol:"Esatto: la soluzione non è accettabile."},
+    {t:"x² − 1 si scompone in (x − 1)(x + 1).",                      a:true,  sol:"Sì: è una differenza di quadrati."},
+  ]);
+  esFill("es2", [
+    {q:"5/(x − 4) = 1: x ≠ ?",       a:4,  sol:"x − 4 ≠ 0 → x ≠ 4."},
+    {q:"1/(x + 3) = 2: x ≠ ?",       a:-3, sol:"x + 3 ≠ 0 → x ≠ −3."},
+    {q:"7/x + 2 = 9: x ≠ ?",         a:0,  sol:"Il denominatore è x: x ≠ 0."},
+    {q:"2/(x − 6) = 4: x ≠ ?",       a:6,  sol:"x − 6 ≠ 0 → x ≠ 6."},
+  ]);
+  esFill("es3", [
+    {q:"12/x = 3 → x = ?",                 a:4, sol:"C.E. x ≠ 0. Moltiplico per x: 12 = 3x → x = 4. Accettabile."},
+    {q:"10/x − 1 = 4 → x = ?",             a:2, sol:"C.E. x ≠ 0. 10 − x = 4x → 10 = 5x → x = 2."},
+    {q:"6/(x − 1) = 3 → x = ?",            a:3, sol:"C.E. x ≠ 1. 6 = 3(x − 1) → 6 = 3x − 3 → 9 = 3x → x = 3."},
+    {q:"4/(x + 2) = 1 → x = ?",            a:2, sol:"C.E. x ≠ −2. 4 = x + 2 → x = 2."},
+    {q:"3/(x − 1) = 6/(x + 1) → x = ?",    a:3, sol:"C.E. x ≠ ±1. In croce: 3(x + 1) = 6(x − 1) → 3x + 3 = 6x − 6 → 9 = 3x → x = 3."},
+  ]);
+</script>
+<script>
+  if ('serviceWorker' in navigator) { navigator.serviceWorker.register('./service-worker.js'); }
+</script>
+</body>
+</html>
